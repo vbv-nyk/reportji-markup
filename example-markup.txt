@@ -1,0 +1,125 @@
+styles = {
+    universal {
+        font_size: 12pt;
+        line_spacing: 1.5;
+        font_family: "Times New Roman";
+        page_size: "A4";
+        margin_top: 1in;
+        margin_bottom: 1in;
+        margin_left: 1in;
+        margin_right: 1in;
+    }
+
+    front_page {
+        title_size: 24pt;
+        title_bold: true;
+        author_size: 18pt;
+        author_italic: true;
+        date_size: 14pt;
+    }
+
+    acknowledgements {
+        heading_size: 20pt;
+        heading_bold: true;
+        text_size: 12pt;
+    }
+
+    table_of_contents {
+        heading_size: 20pt;
+        heading_bold: true;
+        text_size: 12pt;
+    }
+
+    chapter {
+        title_size: 24pt;
+        title_bold: true;
+        subtitle_size: 18pt;
+        subtitle_italic: true;
+        subheading_size: 20pt;
+        subheading_bold: true;
+        text_size: 12pt;
+    }
+
+    figure {
+        caption_size: 12pt;
+        caption_italic: true;
+    }
+
+    table {
+        heading_size: 12pt;
+        heading_bold: true;
+        text_size: 12pt;
+    }
+}
+
+pages = {
+    page1 = front_page {
+        title: "College Report Title";
+        author: "Author Name";
+        date: "Date";
+        paragraphs: [
+            "This is the first paragraph on the front page.",
+            "This is the second paragraph on the front page."
+        ];
+    }
+
+    page2 = acknowledgements {
+        heading: "Acknowledgements";
+        paragraphs: [
+            "This is the first paragraph of the acknowledgements section.",
+            "This is the second paragraph of the acknowledgements section."
+        ];
+    }
+
+    page3 = table_of_contents {
+        heading: "Table of Contents";
+        items: [
+            "1. Introduction",
+            "2. Literature Review",
+            "3. Methodology",
+            "4. Results",
+            "5. Discussion",
+            "6. Conclusion",
+            "7. References"
+        ];
+    }
+
+    page4 = chapter {
+            title: "Introduction";
+            subtitle: "Overview of the Report";
+            sections: [
+                {
+                    subheading: "Background",
+                    paragraphs: [
+                        "This is the first paragraph under Background.",
+                        "This is the second paragraph under Background."
+                    ]
+                },
+                {
+                    subheading: "Objectives",
+                    paragraphs: [
+                        "This is the first paragraph under Objectives.",
+                        "This is the second paragraph under Objectives."
+                    ]
+                }
+            ];
+            figures: [
+                { src: "figure1.png", caption: "Figure 1: Sample Figure" }
+            ];
+            tables: [
+                { title: "Table 1: Sample Table", data: [["Column1", "Column2"], ["Data1", "Data2"]] }
+            ];
+            citations: [
+                "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages."
+            ]
+    }
+}
+
+output = {
+    global {
+        page1,
+        page2,
+        page3,
+        page4
+    }
+}
