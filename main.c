@@ -6,5 +6,6 @@ int main(int argc, char* argv[]) {
     }
     
     load_sections(argv[1]);
+    printf("%s", sections.styles);
     return EXIT_SUCCESS;
 }
