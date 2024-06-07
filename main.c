@@ -7,5 +7,8 @@ int main(int argc, char* argv[]) {
     
     load_sections(argv[1]);
     printf("%s", sections.styles);
+    printf("%s", sections.pages);
+    printf("%s", sections.output);
+    
     return EXIT_SUCCESS;
 }
