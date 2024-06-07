@@ -9,5 +9,6 @@
 #include "error.h"
 #include "sections.h"
 #include <unistd.h>
+#include "files.h"  
 
 #endif

@@ -1,21 +1,15 @@
-CC:=gcc
-objects:=error.o sections.o main.o
-output:=main
+CC := gcc
+SRCS:= $(wildcard api/*.c) main.c
+OBJS := $(SRCS:.c=.o)
+OUTPUT := main
 
-main:$(objects)
-	$(CC) $(objects) -o main
-	
-main.o:main.c libs.h
-	$(CC) -c main.c -o main.o	
+all: $(OUTPUT)
 
-error.o:error.c error.h
-	$(CC) -c error.c -o error.o
-	
-sections.o:sections.c sections.h
-	$(CC) -c sections.c -o sections.o
+$(OUTPUT): $(OBJS)
+	$(CC) $(OBJS) -o $(OUTPUT)
+
+%.o: %.c
+	$(CC) -c $< -o $@
 
 clean:
-	rm -f $(objects) $(output)
-
-
-
+	rm -f $(OBJS) $(OUTPUT)
