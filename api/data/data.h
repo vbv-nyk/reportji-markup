@@ -27,5 +27,5 @@ int extract_variable_name(char* naae, char* input);
     Usage: use strtok() to retrieve the start of the buffer where the token is present 
     Returns the length of the name
 */
-int extract_section_name(char *name);
+int extract_section_name(char *name, char *find_str);
 #endif

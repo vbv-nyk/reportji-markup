@@ -7,7 +7,7 @@
 struct Page {
     char *name;
     char *content;
-    char *styles;
+    char *style;
 };
 
 // Global variable that holds all pages in the document

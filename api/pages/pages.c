@@ -17,23 +17,30 @@ void create_pages() {
     while(token != NULL) {
         char *find_str = strdup(token); 
        if(strstr(find_str, "=") != NULL) {
-          char *name = (char *)malloc(20);
+          char *name = (char *)malloc(100);
+          char *style = (char *)malloc(100);
           char *content = (char *)malloc(1000);
           name[0] = '\0';
           content[0] = '\0';
+
           int name_size = extract_variable_name(name, find_str);
           name = realloc(name, name_size);
+
+          int style_size = extract_section_name(style, find_str);
+          style = realloc(style, style_size);
+
           outer_saveptr = content_between_braces(content, outer_saveptr);
-          struct Page* page = (struct Page*)malloc(strlen(name) + strlen(content));
+          struct Page* page = (struct Page*)malloc(name_size + style_size + strlen(content));
+
           page->name = name;
           page->content = content;
+          page->style = style;
+
           pages[page_count] = page;
-            page_count++;
-            pages =  realloc(pages, (page_count + 1) * sizeof(struct Page*));
+          page_count++;
+        pages =  realloc(pages, (page_count + 1) * sizeof(struct Page*));
        }
-           //printf("%s", outer_saveptr) ;
         token = strtok_r(NULL, "\n", &outer_saveptr);
-        //printf("%s", token);
         free(find_str);;
     }
     total_pages = page_count;

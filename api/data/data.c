@@ -40,7 +40,27 @@ int extract_variable_name(char* name, char* input) {
     name[cur++] = input[i];
    }
    name[cur]='\0';
+   
+   return cur;
 }
-int extract_section_name(char *name) {
 
+int extract_section_name(char *name, char *input) {
+    int n = strlen(input);
+    
+    int i=0;
+    int cur = 0;
+    while(input[i] != '=') {
+        i++;
+    }
+    
+    for(i; i<n; i++) {
+        if(input[i] == '=' || input[i] == ' ' || input[i] == '{') {
+            i++;
+            continue;
+        }
+        name[cur++] = input[i];
+    }
+    
+   name[cur]='\0';
+    return cur;
 }
