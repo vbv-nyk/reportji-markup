@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include "error.h"
 #include "files.h"  
+#include "data/data.h"
+#include "pages/pages.h"
 #include "sections.h"
 
 #endif

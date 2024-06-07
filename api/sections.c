@@ -1,30 +1,11 @@
 #include "sections.h"
 // Definition of the variable
-struct Sections sections; 
+struct Sections sections = {
+    .styles = "\0",
+    .pages = "\0",
+    .output = "\0"
+}; 
 
-void get_content(char *current) {
-   int open_braces = 1; 
-   
-   strcat(current, "{");
-   strcat(current, "\n");
-   
-
-   char *token = strtok(NULL, "\n");
-   do{
-        char *style; 
-        char *find_str = token;
-        strcat(current, token);
-        strcat(current, "\n");
-        if(strstr(find_str, "{") != NULL) {
-            open_braces++;
-        }
-        if(strstr(find_str, "}") != NULL) {
-            open_braces--;
-        }
-        token = strtok(NULL, "\n");
-   } while(open_braces != 0);
-   
-}
 
 // Buffer holds the entry point to either styles, pages or output
 // Continues to store text into the relevant section until it finds
@@ -32,31 +13,35 @@ void get_content(char *current) {
 void find_and_segregate(char *buffer, char *key) {
     char *buffer_cp = (char *)malloc(strlen(buffer) + 1);
     strcpy(buffer_cp, buffer);
-    char *token = strtok(buffer_cp, "\n");
+    
+    char *outer_saveptr = NULL;
+    char *token = strtok_r(buffer_cp, "\n", &outer_saveptr);
     while(token != NULL) {
-        char *find_str = token;
+        char *find_str = (char*)malloc(strlen(token) + 1);
+        strcpy(find_str, token);
         if(strstr(find_str, key) != NULL && strstr(find_str, "=") != NULL && strstr(find_str, "{") != NULL) {
             if(strcmp(key, "styles") == 0) {
                 //printf("Found match for styles\n");
                 sections.styles = (char*)malloc(strlen(buffer));
-                get_content(sections.styles);
+                content_between_braces(sections.styles,outer_saveptr);
                 //printf("%s", sections.styles);
                 break;
             } else if(strcmp(key, "pages") == 0) {
                 //printf("Found match for pages\n");
                 sections.pages = (char*)malloc(strlen(buffer));
-                get_content(sections.pages);
+                content_between_braces(sections.pages, outer_saveptr);
                 //printf("%s", sections.pages);
                 break;
             } else if(strcmp(key, "output") == 0) {
                 //printf("Found match for output\n");
                 sections.output = (char*)malloc(strlen(buffer));
-                get_content(sections.output);
+                content_between_braces(sections.output, outer_saveptr);
                 //printf("%s", sections.output);
                 break;
             }
         }
-        token = strtok(NULL, "\n");
+        token = strtok_r(NULL, "\n", &outer_saveptr);
+        free(find_str);
     }
     free(buffer_cp);
 }

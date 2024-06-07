@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "libs.h": "c",
-        "sections.h": "c"
+        "sections.h": "c",
+        "pages.h": "c"
     }
 }
