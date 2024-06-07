@@ -12,6 +12,7 @@ struct Page {
 
 // Global variable that holds all pages in the document
 extern struct Page** pages;
+extern int total_pages;
 
 void create_pages();
 
