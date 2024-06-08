@@ -23,19 +23,19 @@ void find_and_segregate(char *buffer, char *key) {
             if(strcmp(key, "styles") == 0) {
                 //printf("Found match for styles\n");
                 sections.styles = (char*)malloc(strlen(buffer));
-                content_between_braces(sections.styles,outer_saveptr);
+                content_between_braces(sections.styles,outer_saveptr, "{", "}");
                 //printf("%s", sections.styles);
                 break;
             } else if(strcmp(key, "pages") == 0) {
                 //printf("Found match for pages\n");
                 sections.pages = (char*)malloc(strlen(buffer));
-                content_between_braces(sections.pages, outer_saveptr);
+                content_between_braces(sections.pages, outer_saveptr, "{", "}");
                 //printf("%s", sections.pages);
                 break;
             } else if(strcmp(key, "output") == 0) {
                 //printf("Found match for output\n");
                 sections.output = (char*)malloc(strlen(buffer));
-                content_between_braces(sections.output, outer_saveptr);
+                content_between_braces(sections.output, outer_saveptr, "{", "}");
                 //printf("%s", sections.output);
                 break;
             }

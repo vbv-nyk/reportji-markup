@@ -2,34 +2,6 @@
 #define ELEMENTS_H
 #include "../libs.h"
 
-typedef enum {
-    TITLE,
-    SUBTITLE,
-    HEADING,
-    AUTHOR,
-    DATE,
-    PARAGRAPHS,
-    ITEMS,
-    FIGURES,
-    CITATIONS
-} ElementType;
-
-typedef union {
-    Title title;    
-    Subtitle subtitle;
-    Heading heading;
-    Author author;
-    Date date;
-    Paragraphs paragraphs;
-    Items items;
-    Figures figures;
-    Citations citations;
-} ElementDefinition;
-
-typedef struct {
-    ElementType type;
-    ElementDefinition content;
-} Element;
 
 typedef struct {
     char *text;
@@ -69,3 +41,33 @@ typedef struct {
 
 
 #endif
+
+typedef enum {
+    TITLE,
+    SUBTITLE,
+    HEADING,
+    AUTHOR,
+    DATE,
+    PARAGRAPHS,
+    ITEMS,
+    FIGURES,
+    CITATIONS,
+    INVALID
+} ElementType;
+
+typedef union {
+    Title title;    
+    Subtitle subtitle;
+    Heading heading;
+    Author author;
+    Date date;
+    Paragraphs paragraphs;
+    Items items;
+    Figures figures;
+    Citations citations;
+} ElementDefinition;
+
+typedef struct {
+    ElementType type;
+    ElementDefinition content;
+} Element;

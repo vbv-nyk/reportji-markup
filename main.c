@@ -8,12 +8,7 @@ int main(int argc, char* argv[]) {
     load_sections(argv[1]);
 
     create_pages();
-    clean_data();
+    get_elements();
     
-    int i = 0;
-    while(pages[i] != NULL) {
-        printf("Name:%s\nContent:%s\nStyle:%s", pages[i]->name, pages[i]->content, pages[i]->style);
-        i++;
-    }
     return EXIT_SUCCESS;
 }

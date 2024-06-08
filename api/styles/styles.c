@@ -9,7 +9,7 @@ char* style_from_name(char* name) {
     while(token != NULL) {
        char *find_str = strdup(token);
        if(strstr(find_str, name) != NULL) {
-           content_between_braces(output, inner_ptr);
+           content_between_braces(output, inner_ptr, "{", "}");
        }
        token = strtok_r(NULL, "\n", &inner_ptr);
        free(find_str);

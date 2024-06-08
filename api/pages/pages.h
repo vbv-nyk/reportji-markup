@@ -21,6 +21,6 @@ void create_pages();
  * This function will ease up further parsing
  * Cleans the relevant styles and content section
 */
-void clean_data();
 
+void get_elements();
 #endif

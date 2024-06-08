@@ -6,7 +6,7 @@ int total_pages;
 // Combines page and style and store it in the global variable
 void create_pages() {
     //printf("%s", sections.pages);
-    //printf("%s", sections.styles);
+
         
     char *outer_saveptr = NULL;
 
@@ -29,7 +29,7 @@ void create_pages() {
           int style_size = extract_section_name(style, find_str);
           style = realloc(style, style_size);
 
-          outer_saveptr = content_between_braces(content, outer_saveptr);
+          outer_saveptr = content_between_braces(content, outer_saveptr, "{", "}");
           struct Page* page = (struct Page*)malloc(name_size + style_size + strlen(content));
 
           page->name = name;
@@ -48,6 +48,38 @@ void create_pages() {
     pages[page_count] = NULL;
 }
 
-void clean_data() {
-    
+void read_through_content(char *content) {
+    char* outer_ptr;
+    char* inner_ptr;
+    outer_ptr = content;
+    inner_ptr = content;
+    while(*outer_ptr != '\0') {
+        int length = 0;
+       while(*inner_ptr != '\n' && *inner_ptr != '\0') {
+        length++;
+        inner_ptr++;
+       }
+       char *current_line = strndup(outer_ptr, length);
+       char *element_name = (char*)malloc(strlen(current_line));
+        extract_element_name(element_name, current_line);
+       //printf("%s", element_name);
+       ElementType type = get_element_type(element_name);
+       if(type == TITLE || type == SUBTITLE || type == HEADING || type == AUTHOR || type == DATE) {
+        char *element_content = (char*)malloc(1000);
+        content_between_quotes(element_content, outer_ptr);
+        printf("%s: %s", element_name, element_content);
+        printf("\n");
+        free((element_content));
+       }
+       if(*inner_ptr != '\0') inner_ptr++;
+       outer_ptr = inner_ptr;
+    }
+}
+
+void get_elements() {
+    for(int i=0; i<total_pages; i++) {
+        char* content_copy = strdup(pages[i]->content);
+        read_through_content(content_copy);
+        free(content_copy);
+    }
 }

@@ -1,9 +1,8 @@
 #include "data.h"
 
-char* content_between_braces(char *current, char *outer_pointer) {
+char* content_between_braces(char *current, char *outer_pointer, char* open_brace, char* close_brace ) {
   int open_braces = 1; 
-  
-    strcat(current, "{");
+    strcat(current, open_brace);
     strcat(current, "\n");
 
     char* return_pointer = NULL;
@@ -15,10 +14,10 @@ char* content_between_braces(char *current, char *outer_pointer) {
        strcat(current, inner_token);
        strcat(current, "\n");
 
-      if(strstr(find_str, "{") != NULL) {
+      if(strstr(find_str, open_brace) != NULL) {
           open_braces++;
       }
-      if(strstr(find_str, "}") != NULL) {
+      if(strstr(find_str, close_brace) != NULL) {
           open_braces--;
           if(open_braces == 0)
               break;
@@ -63,4 +62,68 @@ int extract_section_name(char *name, char *input) {
     
    name[cur]='\0';
     return cur;
+}
+
+int extract_element_name(char *name, char *content) {
+    int i = 0;   
+    int cur = 0;
+    int n = strlen(content);
+    while(content[i] == ' ') {
+        i++;
+    }
+    
+    for(i; i<n; i++) {
+        if(content[i] == ':') {
+            break;
+        }
+        name[cur++] = content[i];
+    }
+    name[cur] = '\0';
+    return strlen(name);
+}
+
+ElementType get_element_type(char* element_name) {
+    if(strcmp(element_name, "title") == 0) {
+        return TITLE;
+    }
+    if(strcmp(element_name, "subtitle") == 0) {
+        return SUBTITLE;
+    }
+    if(strcmp(element_name, "heading") == 0) {
+        return HEADING;
+    }
+    if(strcmp(element_name, "author") == 0) {
+        return AUTHOR;
+    }
+    if(strcmp(element_name, "date") == 0) {
+        return DATE;
+    }
+    if(strcmp(element_name, "paragraphs") == 0) {
+        return PARAGRAPHS;
+    }
+    if(strcmp(element_name, "items") == 0) {
+        return ITEMS;
+    }
+    if(strcmp(element_name, "figures") == 0) {
+        return FIGURES;
+    }
+    if(strcmp(element_name, "citations") == 0) {
+        return CITATIONS;
+    }
+    
+    return INVALID;
+}
+
+int content_between_quotes(char* output, char* input) {
+   int cur = 0;
+   while(*input != '\"') {
+       input++;
+   }
+   input++;
+   while(*input != '\"') {
+       output[cur++] = *input;
+       input++;
+   }
+   output[cur] = '\0';
+   return cur;
 }
