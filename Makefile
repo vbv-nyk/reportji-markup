@@ -1,5 +1,5 @@
 CC := gcc
-SRCS:= $(wildcard api/*.c) $(wildcard api/data/*.c) $(wildcard api/pages/*.c) main.c
+SRCS:= $(wildcard api/*.c) $(wildcard api/*/*.c) main.c
 OBJS := $(SRCS:.c=.o)
 OUTPUT := main
 

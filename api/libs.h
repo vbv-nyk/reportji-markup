@@ -11,6 +11,7 @@
 #include "files.h"  
 #include "data/data.h"
 #include "pages/pages.h"
-#include "sections.h"
+#include "sections/sections.h"
+#include "styles/styles.h"
 
 #endif

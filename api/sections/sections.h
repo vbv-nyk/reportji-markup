@@ -1,6 +1,6 @@
 #ifndef SECTIONS_H
 #define SECTIONS_H
-#include "libs.h"
+#include "../libs.h"
 
 // Data structure to hold the different sections of the markup
 struct Sections {
