@@ -45,4 +45,5 @@ void create_pages() {
         free(find_str);;
     }
     total_pages = page_count;
+    pages[page_count] = NULL;
 }
