@@ -87,27 +87,8 @@ pages = {
     page4 = chapter {
             title: "Introduction";
             subtitle: "Overview of the Report";
-            sections: [
-                {
-                    subheading: "Background",
-                    paragraphs: [
-                        "This is the first paragraph under Background.",
-                        "This is the second paragraph under Background."
-                    ]
-                },
-                {
-                    subheading: "Objectives",
-                    paragraphs: [
-                        "This is the first paragraph under Objectives.",
-                        "This is the second paragraph under Objectives."
-                    ]
-                }
-            ];
             figures: [
                 { src: "figure1.png", caption: "Figure 1: Sample Figure" }
-            ];
-            tables: [
-                { title: "Table 1: Sample Table", data: [["Column1", "Column2"], ["Data1", "Data2"]] }
             ];
             citations: [
                 "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages."
