@@ -16,4 +16,10 @@ extern int total_pages;
 
 void create_pages();
 
+/* After the pages have been created and inflated
+ * This function will ease up further parsing
+ * Cleans the relevant styles and content section
+*/
+void clean_data();
+
 #endif

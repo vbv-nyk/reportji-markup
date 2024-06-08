@@ -47,3 +47,7 @@ void create_pages() {
     total_pages = page_count;
     pages[page_count] = NULL;
 }
+
+void clean_data() {
+    
+}
