@@ -34,7 +34,8 @@ void create_pages() {
 
           page->name = name;
           page->content = content;
-          page->style = style;
+          page->style = style_from_name(style);
+          free(style);
 
           pages[page_count] = page;
           page_count++;

@@ -11,6 +11,6 @@ int main(int argc, char* argv[]) {
     printf("%s\n", pages[0]->name);
     printf("%s\n", pages[0]->content);
     printf("%s\n", pages[0]->style);
-    //printf("%d", total_pages);
+    printf("%d", total_pages);
     return EXIT_SUCCESS;
 }
