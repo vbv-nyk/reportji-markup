@@ -215,5 +215,6 @@ void get_elements() {
         pages[i]->elements = elements;
         pages[i]->num_elements = num_elements;
         free(content_copy);
+        free(pages[i]->content);
     }
 }
