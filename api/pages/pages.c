@@ -51,14 +51,13 @@ void create_pages() {
 void store_page_content(ElementType type, char *element_content, int num_elements) {
 }
 
-void load_element_content(ElementType type, char *outer_ptr, int num_elements, Element **elements) {
+void load_element_content(ElementType type, char *outer_ptr, int num_elements) {
     char *element_content = (char *)malloc(1000);
     content_between_quotes(element_content, outer_ptr);
     store_page_content(type, element_content, num_elements);
+    printf("%s", element_content);
     printf("\n");
     num_elements++;
-    elements = realloc(elements, (num_elements + 1) * sizeof(Element *));
-    free((element_content));
 }
 int get_element_names(char *content, ElementType *elementTypes) {
     int num_elements = 0;
@@ -80,6 +79,7 @@ int get_element_names(char *content, ElementType *elementTypes) {
         if (type != INVALID) {
             elementTypes[num_elements++] = type;
             elementTypes = realloc(elementTypes, (num_elements + 1) * sizeof(ElementType));
+            load_element_content(type, outer_ptr, num_elements) ;
         }
 
         if (*inner_ptr != '\0') inner_ptr++;
