@@ -8,6 +8,7 @@ struct Page {
     char *name;
     char *content;
     char *style;
+    int num_elements;
     Element** elements; 
 };
 

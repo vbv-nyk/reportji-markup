@@ -48,23 +48,18 @@ void create_pages() {
     pages[page_count] = NULL;
 }
 
-void store_page_content(ElementType type, char *element_content, int num_elements) {
-}
-
-void load_element_content(ElementType type, char *outer_ptr, int num_elements) {
+char* load_element_content(ElementType type, char *outer_ptr, int num_elements) {
     char *element_content = (char *)malloc(1000);
     content_between_quotes(element_content, outer_ptr);
-    store_page_content(type, element_content, num_elements);
-    printf("%s", element_content);
-    printf("\n");
-    num_elements++;
+    return element_content;
 }
-int get_element_names(char *content, ElementType *elementTypes) {
+int create_elements(char *content, ElementType *elementTypes, Element** elements) {
     int num_elements = 0;
     char *outer_ptr = content;
     char *inner_ptr = content;
 
     while (*outer_ptr != '\0') {
+        Element *element = (Element*)malloc(sizeof(Element));
         int length = 0;
         while (*inner_ptr != '\n' && *inner_ptr != '\0') {
             length++;
@@ -74,12 +69,21 @@ int get_element_names(char *content, ElementType *elementTypes) {
         char *current_line = strndup(outer_ptr, length);
         char *element_name = (char *)malloc(strlen(current_line));
         extract_element_name(element_name, current_line);
-        ElementType type = get_element_type(element_name);
+        ElementType* type = (ElementType*)malloc(sizeof(ElementType));
+        *type = get_element_type(element_name);
 
-        if (type != INVALID) {
-            elementTypes[num_elements++] = type;
-            elementTypes = realloc(elementTypes, (num_elements + 1) * sizeof(ElementType));
-            load_element_content(type, outer_ptr, num_elements) ;
+        if (*type != INVALID) {
+            ElementDefinition* element_definition = (ElementDefinition*)malloc(sizeof(ElementDefinition));
+            Title* title = (Title*)malloc(sizeof(Title));
+            char* content = (char*)malloc(1000);
+            element->type = TITLE; 
+            content = load_element_content(*type, outer_ptr, num_elements) ;
+            title->text = content;
+            element_definition->title = title;
+            element->content = element_definition;
+            elements[num_elements] = element;
+            num_elements++;
+            
         }
 
         if (*inner_ptr != '\0') inner_ptr++;
@@ -92,10 +96,10 @@ void get_elements() {
     for (int i = 0; i < total_pages; i++) {
         char *content_copy = strdup(pages[i]->content);
         ElementType *elementTypes = (ElementType *)malloc(sizeof(ElementType) * (1));
-        int no_of_elements = get_element_names(content_copy, elementTypes);
-        Element** elements = (Element**)malloc(no_of_elements * sizeof(Element*));
-
-        pages[i]->elements ;
+        Element** elements = (Element**)malloc(1 * sizeof(Element*));
+        int num_elements = create_elements(content_copy, elementTypes, elements);
+        pages[i]->elements = elements ;
+        pages[i]->num_elements = num_elements;
         free(content_copy);
     }
 }
