@@ -82,6 +82,7 @@ int extract_element_name(char *name, char *content) {
     return strlen(name);
 }
 
+
 ElementType get_element_type(char* element_name) {
     if(strcmp(element_name, "title") == 0) {
         return TITLE;
@@ -126,4 +127,15 @@ int content_between_quotes(char* output, char* input) {
    }
    output[cur] = '\0';
    return cur;
+}
+
+int parse_figure_source(char* output, char* input) {
+//   char* name = (char*)malloc(strlen(input));
+//   if(extract_element_name(name, input) == "src") {
+//       content_between_quotes(output, input);
+//   }
+}
+
+int parse_figure_caption(char* output, char* input) {
+    
 }

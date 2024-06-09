@@ -33,8 +33,13 @@ typedef struct {
     int count;
 } Items;
 
+typedef struct{
+    char* src;
+    char* caption;
+} FigureContent;
+
 typedef struct {
-    char **text;
+    FigureContent **figureContent;
     int count;
 } Figures;
 
@@ -44,7 +49,6 @@ typedef struct {
 } Citations;
 
 
-#endif
 
 typedef enum {
     TITLE,
@@ -75,3 +79,5 @@ typedef struct {
     ElementType *type;
     ElementDefinition *content;
 } Element;
+
+#endif

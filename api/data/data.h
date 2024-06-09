@@ -49,6 +49,7 @@ int extract_section_name(char *name, char *find_str);
 */
 int extract_element_name(char *name, char *content);
 
+
 /* Input
     The name of the element
     Output
@@ -58,6 +59,10 @@ int extract_element_name(char *name, char *content);
 */
 ElementType get_element_type(char* element_name);
 
+
+int parse_figure_source(char* output, char* input);
+
+int parse_figure_caption(char* output, char* input);
 
 int content_between_quotes(char* output, char* input);
 #endif

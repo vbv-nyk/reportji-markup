@@ -88,7 +88,8 @@ pages = {
             title: "Introduction";
             subtitle: "Overview of the Report";
             figures: [
-                { src: "figure1.png", caption: "Figure 1: Sample Figure" }
+                { src: "figure1.png", caption: "Figure 1: Sample Figure" },
+                { src: "figure2.png", caption: "Figure 2: Not a Sample Figure" },
             ];
             citations: [
                 "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages."
