@@ -25,18 +25,22 @@ typedef struct {
 
 typedef struct {
     char **text;
+    int count;
 } Paragraphs;
 
 typedef struct {
     char **text;
+    int count;
 } Items;
 
 typedef struct {
     char **text;
+    int count;
 } Figures;
 
 typedef struct {
     char **text;
+    int count;
 } Citations;
 
 

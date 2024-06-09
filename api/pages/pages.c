@@ -54,6 +54,22 @@ char* load_element_content(ElementType type, char *outer_ptr, int num_elements) 
     content_between_quotes(element_content, outer_ptr);
     return element_content;
 }
+char** inflate_element_arrays(char* outer_ptr,char** text,int* count) {
+    while(*outer_ptr!=']') {
+        char* output = (char*)malloc(1000);
+        content_between_quotes(output, outer_ptr);
+        text[*count] = output;
+        *count = *count + 1;
+        text = realloc(text, sizeof(char*) * (*count+1));
+        while(*outer_ptr != ',' && *outer_ptr != ']') {
+            outer_ptr++;
+        }
+        if(*outer_ptr == ']') break;
+        else outer_ptr++;
+
+    }
+    return text;
+}
 char* load_element_definition(Element *element, ElementType* type, char* outer_ptr, int num_elements, ElementDefinition* element_definition) {
     if(*type == TITLE) {
         Title* title = (Title*)malloc(sizeof(Title));
@@ -91,13 +107,37 @@ char* load_element_definition(Element *element, ElementType* type, char* outer_p
         date->text = content;
         element_definition->date = date;
     } else if(*type == PARAGRAPHS) {
-        Date* date = (Date*)malloc(sizeof(Date));
-        char* content = (char*)malloc(1000);
         element->type = type; 
-
+        Paragraphs* paragraphs = (Paragraphs*)malloc(sizeof(Paragraphs));
+        int count = 0;
+        char** text = (char**)malloc(sizeof(char*)*1);
+        text = inflate_element_arrays(outer_ptr, text, &count);
+        paragraphs->count = count;
+        paragraphs->text = text;
     } else if(*type == ITEMS) {
+        element->type = type; 
+        Items* items = (Items*)malloc(sizeof(Items));
+        int count = 0;
+        char** text = (char**)malloc(sizeof(char*)*1);
+        text = inflate_element_arrays(outer_ptr, text, &count);
+        items->count = count;
+        items->text = text;
     } else if(*type == FIGURES) {
+        element->type = type; 
+        Figures* figures = (Figures*)malloc(sizeof(Figures));
+        int count = 0;
+        char** text = (char**)malloc(sizeof(char*)*1);
+        //text = inflate_element_arrays(outer_ptr, text, &count);
+        figures->count = count;
+        figures->text = text;
     } else if(*type == CITATIONS) {
+        element->type = type; 
+        Citations* citations = (Citations*)malloc(sizeof(Citations));
+        int count = 0;
+        char** text = (char**)malloc(sizeof(char*)*1);
+        text = inflate_element_arrays(outer_ptr, text, &count);
+        citations->count = count;
+        citations->text = text;
     } 
 }
 int create_elements(char *content, ElementType *elementTypes, Element** elements) {
