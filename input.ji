@@ -64,7 +64,7 @@ pages = {
     }
 
     page2 = acknowledgements {
-        section: "Acknowledgement to the teacher";
+        heading: "Acknowledgement to the teacher";
         paragraphs: [
             "This one is for all my friends",
             "This one is for my doggo"
@@ -72,7 +72,7 @@ pages = {
     }
 
     page3 = table_of_contents {
-        section: "Table of Contents";
+        heading: "Table of Contents";
         items: [
             "1. Introduction",
             "2. Literature Review",
@@ -85,7 +85,7 @@ pages = {
     }
 
     page4 = chapter {
-            section: "Introduction";
+            title: "Introduction";
             subtitle: "Overview of the Report";
             figures: [
                 { src: "figure1.png", caption: "Figure 1: Sample Figure" },
