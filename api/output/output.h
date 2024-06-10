@@ -7,20 +7,20 @@ typedef struct {
 } OutputPage;
 
 typedef struct {
-    OutputPage** outputPages;
+    OutputPage* outputPages;
 } Output;
 
 extern Output* output;
 
-void parse_title();
-void parse_subtitle();
-void parse_heading();
-void parse_author();
-void parse_date();
-void parse_paragraphs();
-void parse_items();
-void parse_figures();
-void parse_citations();
+char* parse_title(ElementDefinition title);
+char* parse_subtitle(ElementDefinition subtitle);
+char* parse_heading(ElementDefinition heading);
+char* parse_author(ElementDefinition author);
+char* parse_date(ElementDefinition date);
+char* parse_paragraphs(ElementDefinition paragraphs);
+char* parse_items(ElementDefinition items);
+char* parse_figures(ElementDefinition figures);
+char* parse_citations(ElementDefinition citations);
 
 char* element_to_latex(Element* element);
 

@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
 
     create_pages();
     get_elements();
+    init_output();
 
-    
     return EXIT_SUCCESS;
 }

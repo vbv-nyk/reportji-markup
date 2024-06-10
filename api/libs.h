@@ -14,5 +14,6 @@
 #include "pages/pages.h"
 #include "sections/sections.h"
 #include "styles/styles.h"
+#include "output/output.h"
 
 #endif
