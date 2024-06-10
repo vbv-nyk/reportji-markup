@@ -15,5 +15,6 @@
 #include "sections/sections.h"
 #include "styles/styles.h"
 #include "output/output.h"
+#include "latex/latex.h"
 
 #endif
