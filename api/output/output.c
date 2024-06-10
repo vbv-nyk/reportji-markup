@@ -104,7 +104,7 @@ void init_output() {
         for(int j=0; j < pages[i]->num_elements; j++) {
             char* output_markup = element_to_latex(pages[i]->elements[j]);
             markup[j] = output_markup;
-            printf("%s", markup[j]);
+            //printf("%s", markup[j]);
         }
         outputPages->markup = markup;
         outputPages->name = strdup(pages[i]->name);

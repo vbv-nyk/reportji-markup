@@ -6,6 +6,7 @@
         "chrono": "c",
         "text_encoding": "c",
         "typeinfo": "c",
-        "data.h": "c"
+        "data.h": "c",
+        "latex.h": "c"
     }
 }
