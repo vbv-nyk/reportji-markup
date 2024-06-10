@@ -4,64 +4,93 @@ Output* output;
 
 char* parse_title(ElementDefinition title) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\title{TITLE: %s}", title.title->text);
+   sprintf(markup, "\\title{%s}\n", title.title->text);
    return markup;
 }
 char* parse_subtitle(ElementDefinition subtitle) {
-
+   char* markup = (char*) malloc(1000);
+   sprintf(markup, "\\begin{abstract}\n%s\n\\end{abstract}\n", subtitle.subtitle->text);
+   return markup;
 }
 char* parse_heading(ElementDefinition heading) {
-        
+   char* markup = (char*) malloc(1000);
+   sprintf(markup, "\\section{%s}\n", heading.heading->text);
+   return markup;
 }
 char* parse_author(ElementDefinition author) {
-        
+   char* markup = (char*) malloc(1000);
+   sprintf(markup, "\\author{%s}\n", author.author->text);
+   return markup;
 }
 char* parse_date(ElementDefinition date) {
-        
+   char* markup = (char*) malloc(1000);
+   sprintf(markup, "\\date{%s}\n", date.date->text);
+   return markup;
 }
 char* parse_paragraphs(ElementDefinition paragraphs) {
-        
+   char* markup = (char*) malloc(1000);
+   sprintf(markup, "%s\\par\n", paragraphs.paragraphs->text[0]);
+
+   for(int i=1; i<paragraphs.paragraphs->count; i++)  {
+       sprintf(markup + strlen(markup), "%s\\par\n",paragraphs.paragraphs->text[i]);
+   }
+   return markup;
 }
+
 char* parse_items(ElementDefinition items) {
-        
+   char* markup = (char*) malloc(1000);
+   markup[0] = '\0';
+   strcat(markup, "\\begin{itemize}\n");
+   for(int i=0; i<items.items->count; i++)  {
+       sprintf(markup + strlen(markup), "\\item %s\n",items.items->text[i]);
+   }
+   strcat(markup, "\\end{itemize}\n");
+   return markup;
 }
 char* parse_figures(ElementDefinition figures) {
-        
+   char* markup = (char*) malloc(1000);
+   //sprintf(markup, "\\title{TITLE: %s}", title.title->text);
+   for(int i=0; i<figures.figures->count; i++) {
+       sprintf(markup + strlen(markup), "\\begin{figure}[h!]\n\\centering\n\\includegraphics[width=0.5\\textwidth]{%s}\n\\caption{%s}\n\\end{figure}\n",figures.figures->figureContent[i]->src, figures.figures->figureContent[i]->caption);
+   }
+   return markup;
 }
+
 char* parse_citations(ElementDefinition citations) {
-        
+   char* markup = (char*) malloc(1000);
+   markup[0] = '\0';
+   strcat(markup, "\\begin{thebibliography}{100}\n");
+
+   for(int i=0; i < citations.citations->count; i++) {
+       sprintf(markup + strlen(markup), "\\bibitem{%d}\n%s\n", i, citations.citations->text[i]);
+   }
+   
+   strcat(markup, "\\end{thebibliography}\n");
+
+   return markup;
 }
 
 
 char* element_to_latex(Element* element) {
     switch(*element->type) {
         case TITLE:
-            parse_title(*element->content);
-            break;
+            return parse_title(*element->content);
         case SUBTITLE:
-            parse_subtitle(*element->content);
-            break;
+            return parse_subtitle(*element->content);
         case HEADING:
-            parse_heading(*element->content);
-            break;
+            return parse_heading(*element->content);
         case AUTHOR:
-            parse_author(*element->content);
-            break;
+            return parse_author(*element->content);
         case DATE:
-            parse_date(*element->content);
-            break;
+            return parse_date(*element->content);
         case PARAGRAPHS:
-            parse_paragraphs(*element->content);
-            break;
+            return parse_paragraphs(*element->content);
         case ITEMS:
-            parse_items(*element->content);
-            break;
+            return parse_items(*element->content);
         case FIGURES:
-            parse_figures(*element->content);
-            break;
+            return parse_figures(*element->content);
         case CITATIONS:
-            parse_citations(*element->content);
-            break;
+            return parse_citations(*element->content);
     }
 }
 
@@ -71,11 +100,17 @@ void init_output() {
     for(int i=0; i < total_pages; i++) {
         OutputPage* outputPages = (OutputPage*)malloc(sizeof(OutputPage));
         char** markup = (char**)malloc(pages[i]->num_elements*(sizeof(char*)));
+        //printf("Page: %s\n", pages[i]->name );
         for(int j=0; j < pages[i]->num_elements; j++) {
             char* output_markup = element_to_latex(pages[i]->elements[j]);
             markup[j] = output_markup;
+            printf("%s", markup[j]);
         }
         outputPages->markup = markup;
+        outputPages->name = strdup(pages[i]->name);
         output[i].outputPages =  outputPages;
+        //free(pages[i]->name);
+        //free(pages[i]->content);
+        //free(pages[i]->elements);
     }
 }

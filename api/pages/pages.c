@@ -57,16 +57,19 @@ char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
         char* output = (char*)malloc(1000);
         content_between_quotes(output, outer_ptr);
+        while(*outer_ptr != '\"' && *outer_ptr != ']') {
+            outer_ptr++;
+        }
+        if(*outer_ptr == ']') break;
+        outer_ptr++;
+        while(*outer_ptr != '\"' && *outer_ptr != ']') {
+            outer_ptr++;
+        }
+        if(*outer_ptr == ']') break;
+        outer_ptr++;
         text[*count] = output;
         *count = *count + 1;
         text = realloc(text, sizeof(char*) * (*count + 1));
-        while (*outer_ptr != ',' && *outer_ptr != ']') {
-            outer_ptr++;
-        }
-        if (*outer_ptr == ']')
-            break;
-        else
-            outer_ptr++;
     }
     return text;
 }
@@ -147,6 +150,7 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         text = inflate_element_arrays(outer_ptr, text, &count);
         paragraphs->count = count;
         paragraphs->text = text;
+        element_definition->paragraphs = paragraphs;
     } else if (*type == ITEMS) {
         element->type = type;
         Items* items = (Items*)malloc(sizeof(Items));
@@ -155,6 +159,8 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         text = inflate_element_arrays(outer_ptr, text, &count);
         items->count = count;
         items->text = text;
+        // printf("%s", items->text[0]);
+        element_definition->items = items;
     } else if (*type == FIGURES) {
         element->type = type;
         Figures* figures = (Figures*)malloc(sizeof(Figures));
@@ -163,6 +169,7 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         figureContent = inflate_figure_arrays(outer_ptr, figureContent, &count);
         figures->count = count;
         figures->figureContent = figureContent;
+        element_definition->figures = figures;
     } else if (*type == CITATIONS) {
         element->type = type;
         Citations* citations = (Citations*)malloc(sizeof(Citations));
@@ -171,6 +178,7 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         text = inflate_element_arrays(outer_ptr, text, &count);
         citations->count = count;
         citations->text = text;
+        element_definition->citations = citations;
     }
 }
 int create_elements(char* content, ElementType* elementTypes, Element** elements) {

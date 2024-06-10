@@ -54,9 +54,9 @@ styles = {
 
 pages = {
     page1 = front_page {
-        title: "College Report Title";
-        author: "Author Name";
-        date: "Date";
+        title: "DBMS Mini Project";
+        author: "Vaibhav Nayak";
+        date: "12 JAN 2023";
         paragraphs: [
             "This is the first paragraph on the front page.",
             "This is the second paragraph on the front page."
@@ -64,15 +64,15 @@ pages = {
     }
 
     page2 = acknowledgements {
-        heading: "Acknowledgements";
+        section: "Acknowledgement to the teacher";
         paragraphs: [
-            "This is the first paragraph of the acknowledgements section.",
-            "This is the second paragraph of the acknowledgements section."
+            "This one is for all my friends",
+            "This one is for my doggo"
         ];
     }
 
     page3 = table_of_contents {
-        heading: "Table of Contents";
+        section: "Table of Contents";
         items: [
             "1. Introduction",
             "2. Literature Review",
@@ -85,13 +85,14 @@ pages = {
     }
 
     page4 = chapter {
-            title: "Introduction";
+            section: "Introduction";
             subtitle: "Overview of the Report";
             figures: [
                 { src: "figure1.png", caption: "Figure 1: Sample Figure" },
                 { src: "figure2.png", caption: "Figure 2: Not a Sample Figure" },
             ];
             citations: [
+                "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages.",
                 "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages."
             ]
     }

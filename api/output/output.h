@@ -3,6 +3,7 @@
 #include "../libs.h"
 
 typedef struct {
+    char* name;
     char** markup;
 } OutputPage;
 
