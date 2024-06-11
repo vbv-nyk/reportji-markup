@@ -28,7 +28,7 @@ char* parse_date(ElementDefinition date) {
    return markup;
 }
 char* parse_paragraphs(ElementDefinition paragraphs) {
-   char* markup = (char*) malloc(1000);
+   char* markup = (char*) malloc(10000);
    sprintf(markup, "%s\\par\n", paragraphs.paragraphs->text[0]);
 
    for(int i=1; i<paragraphs.paragraphs->count; i++)  {

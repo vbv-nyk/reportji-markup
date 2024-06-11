@@ -54,11 +54,16 @@ styles = {
 
 pages = {
     page1 = front_page {
-        title: "DBMS Mini Project";
-        author: "Vaibhav Nayak";
-        date: "12 JAN 2023";
+        heading: "Introduction to our project";
         paragraphs: [
-            "This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
             "This is the second paragraph on the front page."
         ];
     }
@@ -66,10 +71,16 @@ pages = {
     page2 = acknowledgements {
         heading: "Acknowledgement to the teacher";
         paragraphs: [
-            "This one is for all my friends",
-            "This one is for my doggo"
-        ];
-    }
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
+            "This is the second paragraph on the front page."
+        ]    }
 
     page3 = table_of_contents {
         heading: "Table of Contents";
@@ -88,8 +99,8 @@ pages = {
             title: "Introduction";
             subtitle: "Overview of the Report";
             figures: [
-                { src: "figure1.png", caption: "Figure 1: Sample Figure" },
-                { src: "figure2.png", caption: "Figure 2: Not a Sample Figure" },
+                { src: "figure1.png", caption: "Sample Figure" },
+                { src: "figure2.png", caption: "Not a Sample Figure" },
             ];
             citations: [
                 "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages.",

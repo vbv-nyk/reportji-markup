@@ -18,7 +18,7 @@ void create_pages() {
         if (strstr(find_str, "=") != NULL) {
             char* name = (char*)malloc(100);
             char* style = (char*)malloc(100);
-            char* content = (char*)malloc(1000);
+            char* content = (char*)malloc(10000);
             name[0] = '\0';
             content[0] = '\0';
 
@@ -75,9 +75,9 @@ char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
 }
 FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureContent, int* count) {
     while(*outer_ptr != ']') {
-        char *name1 = (char*)malloc(20);
+        char *name1 = (char*)malloc(100);
         char *content1 = (char*)malloc(100);
-        char *name2 = (char*)malloc(20);
+        char *name2 = (char*)malloc(100);
         char *content2 = (char*)malloc(100);
         if(*outer_ptr == '{') {
             outer_ptr++;
@@ -101,6 +101,7 @@ FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureCon
             *count = *count + 1;
             figureContent = realloc(figureContent, sizeof(FigureContent*) * (*count+1));
         }
+        printf("%s %s", name1, name2) ;
         outer_ptr++;
     }
     return figureContent;

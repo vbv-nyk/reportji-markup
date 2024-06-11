@@ -5,6 +5,9 @@ void write_markup_to_file() {
     int fd = open("output.tex", O_RDWR | O_TRUNC | O_CREAT, mode);
     dprintf(fd,"\\documentclass{article}\n");
     dprintf(fd,"\\usepackage{graphicx}\n");
+    dprintf(fd,"\\usepackage[margin=2.5cm]{geometry}\n");
+    dprintf(fd,"\\linespread{1.5}\n");
+    dprintf(fd, "\\tableofcontents\n");
     dprintf(fd,"\\begin{document}\n\n");
 
    for(int i=0; i<total_pages; i++) {
