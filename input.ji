@@ -53,7 +53,7 @@ styles = {
 }
 
 pages = {
-    page1 = front_page {
+     page1= front_page {
         heading: "Introduction to our project";
         paragraphs: [
             "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",

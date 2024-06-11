@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.28)  11 JUN 2024 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.28)  11 JUN 2024 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -69,52 +69,28 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutvoffset=\dimen150
 \Gm@dimlist=\toks18
 )
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \tableofcontents
-                    
-? 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \tableofcontents
-                    
-? 
-(./output.toc)
-\tf@toc=\write3
-\openout3 = `output.toc'.
-
- (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count199
 \l__pdf_internal_box=\box51
 ) (./output.aux)
 \openout1 = `output.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count266
 \scratchdimen=\dimen151
@@ -170,45 +146,25 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
+(./output.toc)
+\tf@toc=\write3
+\openout3 = `output.toc'.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+ [1
 
-! LaTeX Error: Unicode character  (U+000B)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49  
-       ^^G.b^^?\begin{figure}[h!]
-? 
-
-! LaTeX Error: Unicode character ^^G (U+0007)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49  ^^G
-          .b^^?\begin{figure}[h!]
-? 
-! Text line contains an invalid character.
-l.49  ^^G.b^^?
-               \begin{figure}[h!]
-? 
-<figure1.png, id=18, 196.735pt x 257.96375pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+[3] [4]
+<figure1.png, id=19, 196.735pt x 257.96375pt>
 File: figure1.png Graphic file (type png)
 <use figure1.png>
 Package pdftex.def Info: figure1.png  used on input line 51.
 (pdftex.def)             Requested size: 236.01561pt x 309.46834pt.
-<figure2.png, id=19, 227.85126pt x 222.8325pt>
+<figure2.png, id=20, 227.85126pt x 222.8325pt>
 File: figure2.png Graphic file (type png)
 <use figure2.png>
 Package pdftex.def Info: figure2.png  used on input line 56.
 (pdftex.def)             Requested size: 236.01561pt x 230.8223pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -217,28 +173,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 1860 strings out of 476076
- 29497 string characters out of 5793775
+ 1862 strings out of 476076
+ 29518 string characters out of 5793775
  1933187 words of memory out of 5000000
- 23997 multiletter control sequences out of 15000+600000
- 559616 words of font info for 41 fonts, out of 8000000 for 9000
+ 23998 multiletter control sequences out of 15000+600000
+ 559924 words of font info for 42 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,7n,65p,450b,236s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,450b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/vbvnyk/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr9.pfb>
-Output written on output.pdf (6 pages, 76597 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb>
+Output written on output.pdf (6 pages, 91705 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,8 +7,8 @@ void write_markup_to_file() {
     dprintf(fd,"\\usepackage{graphicx}\n");
     dprintf(fd,"\\usepackage[margin=2.5cm]{geometry}\n");
     dprintf(fd,"\\linespread{1.5}\n");
-    dprintf(fd, "\\tableofcontents\n");
-    dprintf(fd,"\\begin{document}\n\n");
+    dprintf(fd,"\\begin{document}\n");
+    dprintf(fd, "\\tableofcontents\n\n");
 
    for(int i=0; i<total_pages; i++) {
        dprintf(fd,"\\newpage\n");

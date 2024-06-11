@@ -101,7 +101,7 @@ FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureCon
             *count = *count + 1;
             figureContent = realloc(figureContent, sizeof(FigureContent*) * (*count+1));
         }
-        printf("%s %s", name1, name2) ;
+        //printf("%s %s", name1, name2) ;
         outer_ptr++;
     }
     return figureContent;
