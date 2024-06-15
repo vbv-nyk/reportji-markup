@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.11)  15 JUN 2024 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.11)  15 JUN 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,6 +829,30 @@ ts/enc/dvips/base/8r.enc}
 
 ]
 
+LaTeX Warning: File `tags_overview.png' not found on input line 55.
+
+
+! Package pdftex.def Error: File `tags_overview.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \includegraphics{tags_overview.png}
+                                        
+? 
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+5.
+(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.4pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.4pt}.
@@ -839,7 +863,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 
-]
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.4pt, for example:
@@ -852,7 +876,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-7.
+9.
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -878,19 +902,9 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 ...degraphics[width=2.5in]{tags_overview.png}
-                                                  
+l.91 \includegraphics{tags_overview.png}
+                                        
 ? 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
-1.
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.4pt, for example:
@@ -901,9 +915,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+]
 
-LaTeX Warning: File `figure.png' not found on input line 102.
+LaTeX Warning: File `figure.png' not found on input line 98.
 
 
 ! Package pdftex.def Error: File `figure.png' not found: using draft setting.
@@ -912,11 +926,11 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 \includegraphics[width=2.5in]{figure.png}
-                                               
+l.98 \includegraphics{figure.png}
+                                 
 ? 
 
-LaTeX Warning: File `example2.png' not found on input line 105.
+LaTeX Warning: File `example2.png' not found on input line 99.
 
 
 ! Package pdftex.def Error: File `example2.png' not found: using draft setting.
@@ -926,8 +940,8 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 \includegraphics[width=2.5in]{example2.png}
-                                                 
+l.99 \includegraphics{example2.png}
+                                   
 ? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -941,7 +955,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-LaTeX Warning: File `parsing_process.png' not found on input line 124.
+LaTeX Warning: File `parsing_process.png' not found on input line 114.
 
 
 ! Package pdftex.def Error: File `parsing_process.png' not found: using draft s
@@ -951,8 +965,8 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 ...raphics[width=2.5in]{parsing_process.png}
-                                                  
+l.114 \includegraphics{parsing_process.png}
+                                           
 ? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -966,7 +980,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-LaTeX Warning: File `conclusion.png' not found on input line 136.
+LaTeX Warning: File `conclusion.png' not found on input line 122.
 
 
 ! Package pdftex.def Error: File `conclusion.png' not found: using draft settin
@@ -976,8 +990,8 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 ...ludegraphics[width=2.5in]{conclusion.png}
-                                                  
+l.122 \includegraphics{conclusion.png}
+                                      
 ? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1019,24 +1033,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `output.out' has not changed.
-(rerunfilecheck)             Checksum: 903A545F2FE6AC86835E20AAC5215E8E;2867.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `output.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `output.out':
+(rerunfilecheck)             Before: B2EF697AA2E75CA98A438B9330A4CF02;84
+(rerunfilecheck)             After:  B225A5C8CBD590C48D18C2A4BD001536;2869.
  ) 
 Here is how much of TeX's memory you used:
- 16069 strings out of 476076
- 248719 string characters out of 5793775
+ 16049 strings out of 476076
+ 248444 string characters out of 5793775
  1938187 words of memory out of 5000000
- 37846 multiletter control sequences out of 15000+600000
- 590769 words of font info for 130 fonts, out of 8000000 for 9000
+ 37828 multiletter control sequences out of 15000+600000
+ 590899 words of font info for 132 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  85i,11n,93p,1003b,466s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb>
-Output written on output.pdf (10 pages, 77300 bytes).
+Output written on output.pdf (10 pages, 76227 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 43137 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
+ 43017 words of extra memory for PDF output out of 51595 (max. 10000000)
 

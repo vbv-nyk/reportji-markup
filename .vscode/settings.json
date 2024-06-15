@@ -8,6 +8,7 @@
         "typeinfo": "c",
         "data.h": "c",
         "latex.h": "c",
-        "elements.h": "c"
+        "elements.h": "c",
+        "output.h": "c"
     }
 }

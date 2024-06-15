@@ -49,12 +49,10 @@ char* parse_items(ElementDefinition items) {
 }
 char* parse_figures(ElementDefinition figures) {
    char* markup = (char*) malloc(1000);
-   //sprintf(markup, "\\title{TITLE: %s}", title.title->text);
-   sprintf(markup, "\\begin{figure}\n\0");
+   markup[0] = '\0';
    for(int i=0; i<figures.figures->count; i++) {
-       sprintf(markup + strlen(markup), "\\centering\n\\includegraphics[width=2.5in]{%s}\n\\caption{%s}\n",figures.figures->figureContent[i]->src, figures.figures->figureContent[i]->caption);
+       sprintf(markup + strlen(markup), "\\includegraphics{%s}\n",figures.figures->figureContent[i]->src, figures.figures->figureContent[i]->caption);
    }
-   sprintf(markup + strlen(markup), "\\end{figure}\n");
    return markup;
 }
 

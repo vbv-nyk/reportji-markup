@@ -55,9 +55,13 @@ styles = {
 pages = {
     page1 = front_page {
         heading: "A Comprehensive Guide";
-        title: "Hello world";
+        title: "Introduction";
         paragraphs: [
-            "Welcome to the official documentation for our custom markup language. This language is designed to be parsed into LaTeX code, allowing you to create structured and professional documents with ease. Our goal is to provide a simple and intuitive syntax that covers all the essential elements needed for document creation."
+"Efficient report creation can often be perceived as a daunting task. Through this project, our objective is to transform the report-making process into an engaging and streamlined experience. We aim to enhance productivity and reduce the perceived complexity associated with generating reports, thereby fostering a more enjoyable and efficient workflow.",
+"In the following sections, we will explore the functionality of the project and gain proficiency in utilizing this report generation tool."
+        ];
+        figures: [
+            { src: "tags_overview.png", caption: "Overview of Supported Tags" }
         ];
         author: "Vaibhav Nayak";
         date: "2024-06-14";
@@ -74,9 +78,7 @@ pages = {
 
     page3 = table_of_contents {
         heading: "Table of Contents";
-        title: [
-            "This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively."
-        ];
+        title: "This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively."; 
         items: [
             "Introduction",
             "Supported Tags",
@@ -92,16 +94,16 @@ pages = {
         title: "Overview of Supported Tags";
         paragraphs: [
             "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
-            "1. **TITLE**: Used to define the title of a document or section.",
-            "2. **SUBTITLE**: Used to define the subtitle of a document or section.",
-            "3. **HEADING**: Used to define a heading within a document.",
-            "4. **AUTHOR**: Used to specify the author of the document.",
-            "5. **DATE**: Used to specify the date of the document.",
-            "6. **PARAGRAPHS**: Used to include one or more paragraphs of text.",
-            "7. **ITEMS**: Used to create a list of items.",
-            "8. **FIGURES**: Used to include figures with captions.",
-            "9. **CITATIONS**: Used to include citations in the document.",
-            "10. **INVALID**: This tag is reserved for error handling and should not be used in valid documents."
+            "1. *TITLE*: Used to define the title of a document or section.",
+            "2. *SUBTITLE*: Used to define the subtitle of a document or section.",
+            "3. *HEADING*: Used to define a heading within a document.",
+            "4. *AUTHOR*: Used to specify the author of the document.",
+            "5. *DATE*: Used to specify the date of the document.",
+            "6. *PARAGRAPHS*: Used to include one or more paragraphs of text.",
+            "7. *ITEMS*: Used to create a list of items.",
+            "8. *FIGURES*: Used to include figures with captions.",
+            "9. *CITATIONS*: Used to include citations in the document.",
+            "10. *INVALID*: This tag is reserved for error handling and should not be used in valid documents."
         ];
         figures: [
             { src: "tags_overview.png", caption: "Overview of Supported Tags" }
