@@ -53,59 +53,122 @@ styles = {
 }
 
 pages = {
-     page1= front_page {
-        heading: "Introduction to our project";
+    page1 = front_page {
+        heading: "A Comprehensive Guide";
+        title: "Hello world";
         paragraphs: [
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the second paragraph on the front page."
+            "Welcome to the official documentation for our custom markup language. This language is designed to be parsed into LaTeX code, allowing you to create structured and professional documents with ease. Our goal is to provide a simple and intuitive syntax that covers all the essential elements needed for document creation."
         ];
+        author: "Vaibhav Nayak";
+        date: "2024-06-14";
     }
 
     page2 = acknowledgements {
-        heading: "Acknowledgement to the teacher";
+        heading: "Acknowledgements";
         paragraphs: [
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.",
-            "This is the second paragraph on the front page."
-        ]    }
+            "Special thanks to everyone who contributed to the development of this markup language. Your feedback and suggestions have been invaluable in shaping this project. We extend our gratitude to the open-source community for providing the tools and libraries that made this project possible."
+        ];    
+        author: "Vaibhav Nayak";
+        date: "2024-06-14";
+    }
 
     page3 = table_of_contents {
         heading: "Table of Contents";
+        title: [
+            "This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively."
+        ];
         items: [
-            "1. Introduction",
-            "2. Literature Review",
-            "3. Methodology",
-            "4. Results",
-            "5. Discussion",
-            "6. Conclusion",
-            "7. References"
+            "Introduction",
+            "Supported Tags",
+            "Usage Examples",
+            "Understanding Parsing",
+            "Conclusion",
+            "References"
         ];
     }
 
     page4 = chapter {
-            title: "Introduction";
-            subtitle: "Overview of the Report";
-            figures: [
-                { src: "figure1.png", caption: "Sample Figure" },
-                { src: "figure2.png", caption: "Not a Sample Figure" },
-            ];
-            citations: [
-                "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages.",
-                "Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages."
-            ]
+        heading: "Supported Tags";
+        title: "Overview of Supported Tags";
+        paragraphs: [
+            "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
+            "1. **TITLE**: Used to define the title of a document or section.",
+            "2. **SUBTITLE**: Used to define the subtitle of a document or section.",
+            "3. **HEADING**: Used to define a heading within a document.",
+            "4. **AUTHOR**: Used to specify the author of the document.",
+            "5. **DATE**: Used to specify the date of the document.",
+            "6. **PARAGRAPHS**: Used to include one or more paragraphs of text.",
+            "7. **ITEMS**: Used to create a list of items.",
+            "8. **FIGURES**: Used to include figures with captions.",
+            "9. **CITATIONS**: Used to include citations in the document.",
+            "10. **INVALID**: This tag is reserved for error handling and should not be used in valid documents."
+        ];
+        figures: [
+            { src: "tags_overview.png", caption: "Overview of Supported Tags" }
+        ];
+    }
+
+    page5 = chapter {
+        heading: "Usage Examples";
+        title: "How to Use the Tags";
+        subtitle: "Practical Applications and Examples";
+        paragraphs: [
+            "Hello world",
+        ];
+        figures: [
+            { src: "example1.png", caption: "Example of a Document Structure" },
+            { src: "example2.png", caption: "Example of Figures and Citations" }
+        ];
+    }
+
+    page6 = chapter {
+        heading: "Understanding Parsing";
+        title: "What is a Parser?";
+        subtitle: "The Role of a Parser in Document Conversion";
+        paragraphs: [
+            "A parser is a tool that reads input data and converts it into a format that can be easily understood and processed. In the context of our markup language, the parser reads the markup syntax and translates it into LaTeX code. This process involves recognizing the various tags and their associated content, then mapping them to the appropriate LaTeX commands.",
+            "The parser ensures that the document structure is maintained and that all elements are correctly formatted. This allows users to write documents using a simple and intuitive syntax while still producing high-quality LaTeX documents."
+        ];
+        items: [
+            "Reading input data",
+            "Recognizing tags and content",
+            "Mapping to LaTeX commands",
+            "Maintaining document structure",
+            "Producing formatted output"
+        ];
+        figures: [
+            { src: "parsing_process.png", caption: "The Parsing Process" }
+        ];
+    }
+
+    page7 = chapter {
+        title: "Conclusion";
+        subtitle: "Summary and Final Thoughts";
+        paragraphs: [
+            "In this documentation, we covered the basics of our custom markup language, including the various tags supported and how to use them. We also discussed the role of a parser in converting markup language to LaTeX code. Our goal is to provide a user-friendly syntax that simplifies the process of creating structured and professional documents.",
+            "We hope this guide helps you get started with our markup language and encourages you to explore its full potential. For more detailed examples and advanced usage, please refer to the additional resources provided in the citations section."
+        ];
+        figures: [
+            { src: "conclusion.png", caption: "Summary of Document Structure" }
+        ];
+    }
+
+    page8 = chapter {
+        heading: "References";
+        title: "Additional Resources and References";
+        paragraphs: [
+            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
+        ];
+        items: [
+            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
+            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
+            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
+            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
+        ];
+        citations: [
+            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
+            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
+        ];
     }
 }
 

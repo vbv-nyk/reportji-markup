@@ -4,22 +4,22 @@ Output* output;
 
 char* parse_title(ElementDefinition title) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\title{%s}\n", title.title->text);
+   sprintf(markup, "\\section{%s}\n", title.title->text);
    return markup;
 }
 char* parse_subtitle(ElementDefinition subtitle) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\begin{abstract}\n%s\n\\end{abstract}\n", subtitle.subtitle->text);
+   sprintf(markup, "\\title{%s}\n", subtitle.subtitle->text);
    return markup;
 }
 char* parse_heading(ElementDefinition heading) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\section{%s}\n", heading.heading->text);
+   sprintf(markup, "\\chapter{%s}\n", heading.heading->text);
    return markup;
 }
 char* parse_author(ElementDefinition author) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\author{%s}\n", author.author->text);
+   sprintf(markup, "\\hfill \\textbf{%s}\n", author.author->text);
    return markup;
 }
 char* parse_date(ElementDefinition date) {
@@ -50,10 +50,11 @@ char* parse_items(ElementDefinition items) {
 char* parse_figures(ElementDefinition figures) {
    char* markup = (char*) malloc(1000);
    //sprintf(markup, "\\title{TITLE: %s}", title.title->text);
-   markup[0] = '\0';
+   sprintf(markup, "\\begin{figure}\n\0");
    for(int i=0; i<figures.figures->count; i++) {
-       sprintf(markup + strlen(markup), "\\begin{figure}[h!]\n\\centering\n\\includegraphics[width=0.5\\textwidth]{%s}\n\\caption{%s}\n\\end{figure}\n",figures.figures->figureContent[i]->src, figures.figures->figureContent[i]->caption);
+       sprintf(markup + strlen(markup), "\\centering\n\\includegraphics[width=2.5in]{%s}\n\\caption{%s}\n",figures.figures->figureContent[i]->src, figures.figures->figureContent[i]->caption);
    }
+   sprintf(markup + strlen(markup), "\\end{figure}\n");
    return markup;
 }
 

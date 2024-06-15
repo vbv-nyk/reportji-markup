@@ -1,66 +1,151 @@
-\documentclass{article}
+\documentclass[oneside]{memoir}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage{grffile}
+\usepackage{mathptmx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{color}
+\definecolor{myorange}{RGB}{255, 165, 0}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}
+{\chaptername\ \thechapter}
+{20pt}
+{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{black}\textbf{VTU College Report}}
+\fancyhead[R]{\color{black}\textbf{\leftmark}}
+\fancyfoot[L]{\color{black}\textbf{Department of XYZ}}
+\fancyfoot[C]{\color{black}\thepage}
+\fancyfoot[R]{\color{black}\textbf{15 June 2024}}
+\renewcommand{\headrule}{\color{myorange}\hrule height 0.4pt}
+\renewcommand{\footrule}{\color{myorange}\hrule height 0.4pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\color{black}\textbf{VTU College Report}}
+  \fancyhead[R]{\color{black}\textbf{\leftmark}}
+  \fancyfoot[L]{\color{black}\textbf{Department of XYZ}}
+  \fancyfoot[C]{\color{black}\thepage}
+  \fancyfoot[R]{\color{black}\textbf{15 June 2024}}
+  \renewcommand{\headrule}{\color{myorange}\hrule height 0.4pt}
+  \renewcommand{\footrule}{\color{myorange}\hrule height 0.4pt}
+}
 \linespread{1.5}
+\usepackage{float}
+\restylefloat{figure}
 \begin{document}
 \tableofcontents
 
 \newpage
-\section{Introduction to our project}
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the second paragraph on the front page.\par
+\chapter{A Comprehensive Guide}
+\section{Hello world}
+Welcome to the official documentation for our custom markup language. This language is designed to be parsed into LaTeX code, allowing you to create structured and professional documents with ease. Our goal is to provide a simple and intuitive syntax that covers all the essential elements needed for document creation.\par
+\hfill \textbf{Vaibhav Nayak}
+\date{2024-06-14}
 
 \newpage
-\section{Acknowledgement to the teacher}
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.This is the first paragraph on the front page.\par
-This is the second paragraph on the front page.\par
+\chapter{Acknowledgements}
+Special thanks to everyone who contributed to the development of this markup language. Your feedback and suggestions have been invaluable in shaping this project. We extend our gratitude to the open-source community for providing the tools and libraries that made this project possible.\par
+\hfill \textbf{Vaibhav Nayak}
+\date{2024-06-14}
 
 \newpage
-\section{Table of Contents}
+\chapter{Table of Contents}
+\section{This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively.}
 \begin{itemize}
-\item 1. Introduction
-\item 2. Literature Review
-\item 3. Methodology
-\item 4. Results
-\item 5. Discussion
-\item 6. Conclusion
-\item 7. References
+\item Introduction
+\item Supported Tags
+\item Usage Examples
+\item Understanding Parsing
+\item Conclusion
+\item References
 \end{itemize}
 
 \newpage
-\title{Introduction}
-\begin{abstract}
-Overview of the Report
-\end{abstract}
-\begin{figure}[h!]
+\chapter{Supported Tags}
+\section{Overview of Supported Tags}
+Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:\par
+1. **TITLE**: Used to define the title of a document or section.\par
+2. **SUBTITLE**: Used to define the subtitle of a document or section.\par
+3. **HEADING**: Used to define a heading within a document.\par
+4. **AUTHOR**: Used to specify the author of the document.\par
+5. **DATE**: Used to specify the date of the document.\par
+6. **PARAGRAPHS**: Used to include one or more paragraphs of text.\par
+7. **ITEMS**: Used to create a list of items.\par
+8. **FIGURES**: Used to include figures with captions.\par
+9. **CITATIONS**: Used to include citations in the document.\par
+10. **INVALID**: This tag is reserved for error handling and should not be used in valid documents.\par
+\begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{figure1.png}
-\caption{Sample Figure}
+\includegraphics[width=2.5in]{tags_overview.png}
+\caption{Overview of Supported Tags}
 \end{figure}
-\begin{figure}[h!]
+
+\newpage
+\chapter{Usage Examples}
+\section{How to Use the Tags}
+\title{Practical Applications and Examples}
+Hello world\par
+\begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{figure2.png}
-\caption{Not a Sample Figure}
+\includegraphics[width=2.5in]{example1.png}
+\caption{Example of a Document Structure}
+\centering
+\includegraphics[width=2.5in]{example2.png}
+\caption{Example of Figures and Citations}
 \end{figure}
+
+\newpage
+\chapter{Understanding Parsing}
+\section{What is a Parser?}
+\title{The Role of a Parser in Document Conversion}
+A parser is a tool that reads input data and converts it into a format that can be easily understood and processed. In the context of our markup language, the parser reads the markup syntax and translates it into LaTeX code. This process involves recognizing the various tags and their associated content, then mapping them to the appropriate LaTeX commands.\par
+The parser ensures that the document structure is maintained and that all elements are correctly formatted. This allows users to write documents using a simple and intuitive syntax while still producing high-quality LaTeX documents.\par
+\begin{itemize}
+\item Reading input data
+\item Recognizing tags and content
+\item Mapping to LaTeX commands
+\item Maintaining document structure
+\item Producing formatted output
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=2.5in]{parsing_process.png}
+\caption{The Parsing Process}
+\end{figure}
+
+\newpage
+\section{Conclusion}
+\title{Summary and Final Thoughts}
+In this documentation, we covered the basics of our custom markup language, including the various tags supported and how to use them. We also discussed the role of a parser in converting markup language to LaTeX code. Our goal is to provide a user-friendly syntax that simplifies the process of creating structured and professional documents.\par
+We hope this guide helps you get started with our markup language and encourages you to explore its full potential. For more detailed examples and advanced usage, please refer to the additional resources provided in the citations section.\par
+\begin{figure}
+\centering
+\includegraphics[width=2.5in]{conclusion.png}
+\caption{Summary of Document Structure}
+\end{figure}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
 \begin{thebibliography}{100}
 \bibitem{0}
-Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages.
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
 \bibitem{1}
-Author, A. (Year). Title of the paper. Journal Name, Volume(Issue), pages.
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
 \end{thebibliography}
 
 \end{document}
