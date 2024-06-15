@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{grffile}
+\usepackage{tocloft}
 \usepackage{mathptmx}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{hyperref}
@@ -40,8 +41,12 @@
 \usepackage{float}
 \restylefloat{figure}
 \begin{document}
+\setcounter{page}{0}
 \tableofcontents
 
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \newpage
 \chapter{A Comprehensive Guide}
 \section{Hello world}
@@ -94,7 +99,7 @@ Our markup language supports a variety of tags to help you create rich and struc
 Hello world\par
 \begin{figure}
 \centering
-\includegraphics[width=2.5in]{example1.png}
+\includegraphics[width=2.5in]{figure.png}
 \caption{Example of a Document Structure}
 \centering
 \includegraphics[width=2.5in]{example2.png}
@@ -119,6 +124,7 @@ The parser ensures that the document structure is maintained and that all elemen
 \includegraphics[width=2.5in]{parsing_process.png}
 \caption{The Parsing Process}
 \end{figure}
+Content after the figure\par
 
 \newpage
 \section{Conclusion}

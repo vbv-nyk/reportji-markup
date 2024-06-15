@@ -7,6 +7,7 @@
         "text_encoding": "c",
         "typeinfo": "c",
         "data.h": "c",
-        "latex.h": "c"
+        "latex.h": "c",
+        "elements.h": "c"
     }
 }

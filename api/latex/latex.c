@@ -7,6 +7,7 @@ dprintf(fd, "\\documentclass[oneside]{memoir}\n");
 dprintf(fd, "\\usepackage[T1]{fontenc}\n");
 dprintf(fd, "\\usepackage{graphicx}\n");
 dprintf(fd, "\\usepackage{grffile}\n");
+ dprintf(fd, "\\usepackage{tocloft}\n"); // Include tocloft package
 dprintf(fd, "\\usepackage{mathptmx}\n");
 dprintf(fd, "\\usepackage[a4paper, total={6in, 8in}]{geometry}\n");
 dprintf(fd, "\\usepackage{hyperref}\n");
@@ -51,7 +52,13 @@ dprintf(fd,"\\usepackage{float}\n");
 dprintf(fd,"\\restylefloat{figure}\n");
 dprintf(fd, "\\begin{document}\n");
 
+
+dprintf(fd, "\\setcounter{page}{0}\n");  // Reset page counter to 1
 dprintf(fd, "\\tableofcontents\n\n");
+dprintf(fd, "\\clearpage\n"); // Start new page after TOC
+
+dprintf(fd, "\\pagenumbering{arabic}\n"); // Start Arabic page numbering
+dprintf(fd, "\\setcounter{page}{1}\n");  // Reset page counter to 1
 
 
    for(int i=0; i<total_pages; i++) {

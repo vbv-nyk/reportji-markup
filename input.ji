@@ -116,7 +116,7 @@ pages = {
             "Hello world",
         ];
         figures: [
-            { src: "example1.png", caption: "Example of a Document Structure" },
+            { src: "figure.png", caption: "Example of a Document Structure" },
             { src: "example2.png", caption: "Example of Figures and Citations" }
         ];
     }
@@ -138,6 +138,9 @@ pages = {
         ];
         figures: [
             { src: "parsing_process.png", caption: "The Parsing Process" }
+        ];
+        paragraphs: [
+            "Content after the figure"
         ];
     }
 

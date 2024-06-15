@@ -1,0 +1,5 @@
+make
+./main input.ji
+rm output.pdf
+pdflatex output.tex
+sioyek  output.pdf
