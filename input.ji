@@ -102,9 +102,33 @@ pages = {
         figures: [
             { src: "PG1OP.png", caption: "RESULT of the code" }
         ];
+        title:"Tags used"
+          paragraphs: [
+            "Tag languages are a type of markup language that use tags to define elements within a document. These languages are designed to be easy to read and 
+            understand, making them widely used for structuring and presenting content on the web.",
+            "The structure includes sections such as ``Pages''and ``Tags used'' with content divided into titles, paragraphs, and figures.",
+             "The ``Pages'' section explains the project's goal of simplifying and enhancing report creation through a custom markup language, highlighting the document's
+            division into several pages. Each page is meant to detail various aspects and functionalities of the markup language, ensuring a consistent look and feel
+            across the entire document."
+            "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
+           
+        ]; 
+        items: [
+            "HEADING: Used to define a heading within a document. Headings are typically used to denote sections or subsections of content, providing structure and hierarchy to the document. They can vary in importance and size, often formatted differently to distinguish them from regular text.",
+            "AUTHOR: Used to specify the author of the document. This tag is essential for indicating who created or contributed to the content, especially in collaborative or academic settings where authorship attribution is crucial.",
+            "DATE: Used to specify the date of the document. This tag helps establish the timeline or versioning of the document, ensuring users can reference the most current or relevant information.",
+            "PARAGRAPHS: Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present information in cohesive blocks that are easier to read and comprehend.",
+            "ITEMS: Used to create a list of items. This tag is useful for structuring data or content into a list format, making it easier for readers to scan and understand sequential information.",
+            "FIGURES: Used to include figures with captions. Figures are often used to visually illustrate concepts or data within a document, with captions providing explanatory context for each figure.",
+            "CITATIONS: Used to include citations in the document. This tag is essential for referencing external sources or acknowledging borrowed content, ensuring proper attribution and credibility.",
+            "INVALID: This tag is reserved for error handling and should not be used in valid documents. It serves as a placeholder for managing unexpected or erroneous content within the markup language, helping maintain document integrity."
+        ]
         paragraphs: [
-            "Test paragraph"            
-        ];
+            "The above displayed content is using the ``items'' tag and this tag basically acts like an array in which each entry is separated by a ``,'' "
+           
+        ]; 
+
+
     }
 
     page3 = table_of_contents {
@@ -127,16 +151,16 @@ pages = {
         title: "Overview of Supported Tags";
         paragraphs: [
             "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
-            "1. **TITLE**: Used to define the title of a document or section.",
-            "2. **SUBTITLE**: Used to define the subtitle of a document or section.",
-            "3. **HEADING**: Used to define a heading within a document.",
-            "4. **AUTHOR**: Used to specify the author of the document.",
-            "5. **DATE**: Used to specify the date of the document.",
-            "6. **PARAGRAPHS**: Used to include one or more paragraphs of text.",
-            "7. **ITEMS**: Used to create a list of items.",
-            "8. **FIGURES**: Used to include figures with captions.",
-            "9. **CITATIONS**: Used to include citations in the document.",
-            "10. **INVALID**: This tag is reserved for error handling and should not be used in valid documents."
+            "1. TITLE: Used to define the title of a document or section.",
+            "2. SUBTITLE: Used to define the subtitle of a document or section.",
+            "3. HEADING: Used to define a heading within a document.",
+            "4. AUTHOR: Used to specify the author of the document.",
+            "5. DATE: Used to specify the date of the document.",
+            "6. PARAGRAPHS: Used to include one or more paragraphs of text.",
+            "7. ITEMS: Used to create a list of items.",
+            "8. FIGURES: Used to include figures with captions.",
+            "9. CITATIONS: Used to include citations in the document.",
+            "10. INVALID: This tag is reserved for error handling and should not be used in valid documents."
         ];
         figures: [
             { src: "tags_overview.png", caption: "Overview of Supported Tags" }

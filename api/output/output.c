@@ -38,7 +38,7 @@ char* parse_paragraphs(ElementDefinition paragraphs) {
 }
 
 char* parse_items(ElementDefinition items) {
-   char* markup = (char*) malloc(1000);
+   char* markup = (char*) malloc(10000);
    markup[0] = '\0';
    strcat(markup, "\\begin{itemize}\n");
    for(int i=0; i<items.items->count; i++)  {
