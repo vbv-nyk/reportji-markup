@@ -1,6 +1,5 @@
 make clean
 make
 ./main input.ji
-rm output.pdf
-pdflatex output.tex
+pdflatex -interaction=nonstopmode output.tex
 okular  output.pdf
