@@ -12,4 +12,4 @@ $(OUTPUT): $(OBJS)
 	$(CC) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OUTPUT)
+	rm -f $(OBJS) $(OUTPUT) texput.log rpg output.* missfont.log 

@@ -3,7 +3,7 @@
 void write_markup_to_file() {
     mode_t mode = S_IRUSR | S_IWUSR  | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
     int fd = open("output.tex", O_RDWR | O_TRUNC | O_CREAT, mode);
-dprintf(fd, "\\documentclass[oneside]{memoir}\n");
+dprintf(fd, "\\documentclass[oneside]{book}\n");
 dprintf(fd, "\\usepackage[T1]{fontenc}\n");
 dprintf(fd, "\\usepackage{graphicx}\n");
 dprintf(fd, "\\usepackage{grffile}\n");
@@ -14,6 +14,7 @@ dprintf(fd, "\\usepackage{hyperref}\n");
 dprintf(fd, "\\usepackage{xcolor}\n");
 dprintf(fd, "\\usepackage{microtype}\n");
 dprintf(fd, "\\usepackage{color}\n");
+
 dprintf(fd, "\\definecolor{myorange}{RGB}{255, 165, 0}\n");
 // Add the titlesec package and chapter spacing configuration
 dprintf(fd, "\\usepackage{titlesec}\n");
@@ -50,11 +51,14 @@ dprintf(fd, "}\n");
 dprintf(fd, "\\linespread{1.5}\n");
 dprintf(fd,"\\usepackage{float}\n");
 dprintf(fd,"\\restylefloat{figure}\n");
+
 dprintf(fd, "\\begin{document}\n");
 
 
 dprintf(fd, "\\setcounter{page}{0}\n");  // Reset page counter to 1
-dprintf(fd, "\\tableofcontents\n\n");
+dprintf(fd, "\\tableofcontents\n");
+dprintf(fd, "\\newpage");
+dprintf(fd, "\\listoffigures\n");
 dprintf(fd, "\\clearpage\n"); // Start new page after TOC
 
 dprintf(fd, "\\pagenumbering{arabic}\n"); // Start Arabic page numbering
