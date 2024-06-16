@@ -1,0 +1,299 @@
+\documentclass[oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{tocloft}
+\usepackage{mathptmx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{color}
+\definecolor{myorange}{RGB}{255, 165, 0}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}
+{\chaptername\ \thechapter}
+{20pt}
+{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{black}\textbf{VTU College Report}}
+\fancyhead[R]{\color{black}\textbf{\leftmark}}
+\fancyfoot[L]{\color{black}\textbf{Department of XYZ}}
+\fancyfoot[C]{\color{black}\thepage}
+\fancyfoot[R]{\color{black}\textbf{15 June 2024}}
+\renewcommand{\headrule}{\color{myorange}\hrule height 0.4pt}
+\renewcommand{\footrule}{\color{myorange}\hrule height 0.4pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\color{black}\textbf{VTU College Report}}
+  \fancyhead[R]{\color{black}\textbf{\leftmark}}
+  \fancyfoot[L]{\color{black}\textbf{Department of XYZ}}
+  \fancyfoot[C]{\color{black}\thepage}
+  \fancyfoot[R]{\color{black}\textbf{15 June 2024}}
+  \renewcommand{\headrule}{\color{myorange}\hrule height 0.4pt}
+  \renewcommand{\footrule}{\color{myorange}\hrule height 0.4pt}
+}
+\linespread{1.5}
+\usepackage{float}
+\restylefloat{figure}
+\begin{document}
+\setcounter{page}{0}
+\tableofcontents
+\newpage\listoffigures
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\newpage
+\chapter{A Comprehensive Guide}
+\section{Introduction}
+Efficient report creation can often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
+             into an engaging and streamlined experience. We aim to enhance productivity and reduce the perceived complexity associated with generating reports,
+             thereby fostering a more enjoyable and efficient workflow.In the coming sections , we will see the working of the project and thereby learn to use this
+              report generation tool.\par
+Figure 1.1 Represents the file structure.
+            The \textbf{styles} object defines various formatting rules such as font size, line spacing, font family, and more. These rules are tailored for different 
+            sections of a report or document. For example, styles may dictate how headings, paragraphs, figures, and tables are formatted throughout the document 
+            to ensure consistency and professionalism.\par
+The pages object specifies individual pages that make up the content of the report. Each page is formatted according to the 
+            rules defined in the 'styles' object and contains specific content, such as paragraphs, headings, figures, and lists.Each page contributes to presenting a 
+            comprehensive guide with structured content and appropriate formatting styles defined in the styles object.\par
+The output object organizes the main content of the document by referencing specific pages from the pages object.
+            These pages are intended to be rendered or outputted together as part of the final document, ensuring that the structured content defined in pages is 
+            presented in a cohesive ``manner''.\par
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{Code Structure}
+\end{figure}
+\newpage
+\chapter{Pages}
+\section{What are Pages}
+This project focuses on simplifying and enhancing the process of report creation using a custom markup language. The document is divided into several 
+            pages, each detailing various aspects and functionalities of the markup language. \par
+The pages object contains individual pages that structure the document, each formatted according to the styles defined earlier. Each page contributes 
+            to the overall content and ensures a consistent look and feel.\par
+The pages section is where all content is placed and formatted. This is crucial for the end user as it is the main area they will interact with to create 
+            and structure their reports.\par
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{Example of the code}
+\end{figure}\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{RESULT of the code}
+\end{figure}Test paragraph\par
+
+\newpage
+\chapter{Table of Contents}
+\section{This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively.}
+\begin{itemize}
+\item Introduction
+\item Supported Tags
+\item Usage Examples
+\item Understanding Parsing
+\item Conclusion
+\item References
+\end{itemize}
+
+\newpage
+\chapter{Supported Tags}
+\section{Overview of Supported Tags}
+Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:\par
+1. **TITLE**: Used to define the title of a document or section.\par
+2. **SUBTITLE**: Used to define the subtitle of a document or section.\par
+3. **HEADING**: Used to define a heading within a document.\par
+4. **AUTHOR**: Used to specify the author of the document.\par
+5. **DATE**: Used to specify the date of the document.\par
+6. **PARAGRAPHS**: Used to include one or more paragraphs of text.\par
+7. **ITEMS**: Used to create a list of items.\par
+8. **FIGURES**: Used to include figures with captions.\par
+9. **CITATIONS**: Used to include citations in the document.\par
+10. **INVALID**: This tag is reserved for error handling and should not be used in valid documents.\par
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{Overview of Supported Tags}
+\end{figure}
+\newpage
+\chapter{Usage Examples}
+\section{How to Use the Tags}
+\title{Practical Applications and Examples}
+Hello world\par
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{Example of a Document Structure}
+\includegraphics{sample.png}
+\caption{Example of Figures and Citations}
+\end{figure}
+\newpage
+\chapter{Understanding Parsing}
+\section{What is a Parser?}
+\title{The Role of a Parser in Document Conversion}
+A parser is a tool that reads input data and converts it into a format that can be easily understood and processed. In the context of our markup language, the parser reads the markup syntax and translates it into LaTeX code. This process involves recognizing the various tags and their associated content, then mapping them to the appropriate LaTeX commands.\par
+The parser ensures that the document structure is maintained and that all elements are correctly formatted. This allows users to write documents using a simple and intuitive syntax while still producing high-quality LaTeX documents.\par
+\begin{itemize}
+\item Reading input data
+\item Recognizing tags and content
+\item Mapping to LaTeX commands
+\item Maintaining document structure
+\item Producing formatted output
+\end{itemize}
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{The Parsing Process}
+\end{figure}Content after the figure\par
+
+\newpage
+\section{Conclusion}
+\title{Summary and Final Thoughts}
+In this documentation, we covered the basics of our custom markup language, including the various tags supported and how to use them. We also discussed the role of a parser in converting markup language to LaTeX code. Our goal is to provide a user-friendly syntax that simplifies the process of creating structured and professional documents.\par
+We hope this guide helps you get started with our markup language and encourages you to explore its full potential. For more detailed examples and advanced usage, please refer to the additional resources provided in the citations section.\par
+\begin{figure}[h]
+\centering
+\includegraphics{sample.png}
+\caption{Summary of Document Structure}
+\end{figure}
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\newpage
+\chapter{References}
+\section{Additional Resources and References}
+Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas.\par
+\begin{itemize}
+\item Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.
+\item Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.
+\item Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\item Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{itemize}
+\begin{thebibliography}{100}
+\bibitem{0}
+Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.
+\bibitem{1}
+Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.
+\end{thebibliography}
+
+\end{document}
