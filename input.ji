@@ -57,7 +57,7 @@ pages = {
         heading: "A Comprehensive Guide";
         title: "Introduction";
         paragraphs: [
-            "Efficient report creation can often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
+            "\textbf{Efficient report creation} can often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
              into an engaging and streamlined experience. We aim to enhance productivity and reduce the perceived complexity associated with generating reports,
              thereby fostering a more enjoyable and efficient workflow.In the coming sections , we will see the working of the project and thereby learn to use this
               report generation tool."
@@ -90,7 +90,7 @@ pages = {
         paragraphs: [
             "This project focuses on simplifying and enhancing the process of report creation using a custom markup language. The document is divided into several 
             pages, each detailing various aspects and functionalities of the markup language. ",
-            "The pages object contains individual pages that structure the document, each formatted according to the styles defined earlier. Each page contributes 
+            "The \textbf{Pages} object contains individual pages that structure the document, each formatted according to the styles defined earlier. Each page contributes 
             to the overall content and ensures a consistent look and feel.",
             "The pages section is where all content is placed and formatted. This is crucial for the end user as it is the main area they will interact with to create 
             and structure their reports.If a lot of content is pasted within a page , it is automaatically moved to the next page.It is important to note that every page 
@@ -106,13 +106,12 @@ pages = {
         ];
         title:"Tags used";
           paragraphs: [
-            "Tag languages are a type of markup language that use tags to define elements within a document. These languages are designed to be easy to read and 
+            "\textbf{Tag languages} are a type of markup language that use tags to define elements within a document. These languages are designed to be easy to read and 
             understand, making them widely used for structuring and presenting content on the web.",
-            "The structure includes sections such as ``Pages''and ``Tags used'' with content divided into titles, paragraphs, and figures.",
              "The ``Pages'' section explains the project's goal of simplifying and enhancing report creation through a custom markup language, highlighting the document's
             division into several pages. Each page is meant to detail various aspects and functionalities of the markup language, ensuring a consistent look and feel
             across the entire document."
-            "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
+            "Below is a detailed explanation of each supported tag:",
            
         ]; 
         items: [
@@ -129,7 +128,8 @@ pages = {
             "\textbf{FIGURES}: Used to include figures with captions. Figures are often used to visually illustrate concepts or data within a document,
             with captions providing explanatory context for each figure.",
             "\textbf{CITATIONS}: Used to include citations in the document. This tag is essential for referencing external sources or acknowledging borrowed content,
-            ensuring proper attribution and credibility."
+            ensuring proper attribution and credibility.The citations tag creates a new Page and name it as ``Bibliography'' and place all the contents in it.It uses 
+            an array data structure similar to that of paragraph and item."
         ]
         }
 
@@ -151,10 +151,9 @@ pages = {
         "Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present
         information in cohesive blocks that are easier to read and comprehend. Unlike title and heading tags, these have an array data structure which helps the user add multiple 
         paragraphs within the square brackets. Each paragraph is comma-separated and enclosed in quotes.",
-        "Let us take a look at paragraphs,author and date in the next page "
+        "Next, we will examine the implementation and usage of paragraphs, the author tag, and the date tag in the following section"
     ];
 }
-
 
     page4 = chapter {
         title: "Example Paragraph on Parser";
@@ -182,46 +181,6 @@ pages = {
     date:"2024-06-17";
 
     }
-
-    page5 = chapter {
-        heading: "Usage Examples";
-        title: "How to Use the Tags";
-        subtitle: "Practical Applications and Examples";
-        paragraphs: [
-            "Hello world",
-        ];
-        figures: [
-            { src: "figure.png", caption: "Example of a Document Structure" },
-            { src: "example2.png", caption: "Example of Figures and Citations" }
-        ];
-    }
-
-    page6 = chapter {
-        heading: "Understanding Parsing";
-        title: "What is a Parser?";
-    paragraphs: [
-        "A parser is a tool that reads input data and converts it into a format that can be easily understood and processed. In the context of our markup language, the parser reads the markup syntax and translates it into LaTeX code. This process involves recognizing the various tags and their associated content, then mapping them to the appropriate LaTeX commands.",
-        "The parser ensures that the document structure is maintained and that all elements are correctly formatted. This allows users to write documents using a simple and intuitive syntax while still producing high-quality LaTeX documents.",
-        "The parser works by analyzing the input text line by line, identifying the tags, and mapping them to the appropriate LaTeX commands. For example, a heading tag in the markup language would be converted to the equivalent LaTeX command for headings, ensuring that the document's structure is preserved. This process not only automates the conversion but also ensures that the resulting LaTeX code is clean, well-organized, and free from errors.",
-        "In addition to basic syntax conversion, the parser often includes error checking and handling mechanisms. It can detect common mistakes such as missing tags, mismatched brackets, or incorrect nesting, and provide meaningful error messages to help the user correct these issues. This robustness is essential for producing high-quality LaTeX documents, as even small syntax errors can lead to significant formatting issues in the final output.",
-        "By automating the translation from markup language to LaTeX, the parser significantly reduces the manual effort required to create professional documents. Users can focus on writing content using a simpler, more intuitive syntax, while the parser takes care of the complex formatting details. This not only saves time but also makes the process accessible to those who may not be familiar with LaTeX, broadening the range of users who can benefit from this powerful typesetting system."
-    ];
-
-        items: [
-            "Reading input data",
-            "Recognizing tags and content",
-            "Mapping to LaTeX commands",
-            "Maintaining document structure",
-            "Producing formatted output"
-        ];
-        figures: [
-            { src: "parsing_process.png", caption: "The Parsing Process" }
-        ];
-        paragraphs: [
-            "Content after the figure"
-        ];
-    }
-
     page7 = chapter {
         heading: "Conclusion";
         title: "Summary and Final Thoughts";
@@ -234,18 +193,15 @@ pages = {
             the corresponding LaTeX commands. By automating this conversion, the parser simplifies the document creation process, allowing users to focus on content rather than formatting.",
             "Our goal is to provide a user-friendly syntax that simplifies the process of creating structured and professional documents. The markup language is designed to be intuitive, making it accessible even to those with little to no prior experience in coding or document formatting. We included detailed examples and explanations to guide you through each step, ensuring you can make the most of the available tags and features.",
             "We hope this guide helps you get started with our markup language and encourages you to explore its full potential. As you become more familiar with the syntax and capabilities, you'll be able to create increasingly complex and polished documents. Whether you're working on reports, articles, or any other type of structured content, our markup language is here to streamline your workflow and enhance your productivity."
-];
-
-        figures: [
-            { src: "conclusion.png", caption: "Summary of Document Structure" }
         ];
+
+
     }
 
     page8 = chapter {
         heading: "References";
-        title: "Additional Resources and References";
         paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
+            "Below are additional resources for references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
         ];
         items: [
             "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
@@ -255,128 +211,19 @@ pages = {
         ];
         citations: [
             "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
+            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65.",
+            "Smith, A. (2022). Advanced Markup Parsing. Journal of Computer Science, 10(2), 120-135.",
+            "Brown, L. (2023). XML and HTML Parsing. Web Development Review, 5(3), 80-95.",
+            "Williams, R. (2021). Efficient Parsing Algorithms. Computing Today, 7(4), 300-315.",
+            "Taylor, K. (2022). Syntax and Semantics in Markup Languages. Journal of Programming Languages, 8(2), 210-225.",
+            "Anderson, P. (2023). Parsing and Compiler Design. Software Engineering Journal, 6(1), 100-115.",
+            "Miller, T. (2022). Introduction to Markup Language Parsing. Educational Journal of Computer Science, 4(3), 90-105.",
+            "Wilson, J. (2021). Practical Applications of Parsing. Journal of Web Technologies, 9(4), 140-155.",
+            "Davis, S. (2023). Challenges in Modern Parsing Techniques. Journal of Advanced Computing, 11(2), 60-75."
         ];
+
     }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
-    page8 = chapter {
-        heading: "References";
-        title: "Additional Resources and References";
-        paragraphs: [
-            "Below are additional resources and references that provide further information on markup languages, LaTeX, and parsing techniques. These resources can help you deepen your understanding and expand your knowledge in these areas."
-        ];
-        items: [
-            "Doe, J. (2023). Example Document Using Our Markup Language. Journal of Markup Languages, 1(1), 1-10.",
-            "Smith, A. (2023). Advanced Usage of Custom Markup. LaTeX Journal, 2(2), 100-110.",
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-        citations: [
-            "Johnson, M. (2023). Parsing Techniques for Markup Languages. Parsing Journal, 3(4), 200-215.",
-            "Doe, J. (2023). Understanding Parsers. LaTeX Journal, 2(1), 50-65."
-        ];
-    }
+    
 }
 
 output = {
