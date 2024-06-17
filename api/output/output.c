@@ -19,12 +19,12 @@ char* parse_heading(ElementDefinition heading) {
 }
 char* parse_author(ElementDefinition author) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\hfill \\textbf{%s}\n", author.author->text);
+   sprintf(markup, "\\hfill \\textbf{%s}\\par\n", author.author->text);
    return markup;
 }
 char* parse_date(ElementDefinition date) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\date{%s}\n", date.date->text);
+   sprintf(markup, "\\hfill \\textbf{%s}\\par\n", date.date->text);
    return markup;
 }
 char* parse_paragraphs(ElementDefinition paragraphs) {
