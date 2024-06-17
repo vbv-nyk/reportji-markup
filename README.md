@@ -8,7 +8,7 @@ An automation tool used for report generation.
 
 - A linux Environment.
 - Packages shown in upcoming sections.
-- Basic computering knowledge.
+- Basic computing knowledge.
 ## Installation
 
 Install visual studio code
