@@ -93,7 +93,9 @@ pages = {
             "The pages object contains individual pages that structure the document, each formatted according to the styles defined earlier. Each page contributes 
             to the overall content and ensures a consistent look and feel.",
             "The pages section is where all content is placed and formatted. This is crucial for the end user as it is the main area they will interact with to create 
-            and structure their reports."
+            and structure their reports.If a lot of content is pasted within a page , it is automaatically moved to the next page.It is important to note that every page 
+            tag that we define here starts off with a new page and each page must contain a heading and title .The title can also be considered as a subheading under which the
+            the user gets to add and explain."
             
         ];    
         figures: [
@@ -102,7 +104,7 @@ pages = {
         figures: [
             { src: "PG1OP.png", caption: "RESULT of the code" }
         ];
-        title:"Tags used"
+        title:"Tags used";
           paragraphs: [
             "Tag languages are a type of markup language that use tags to define elements within a document. These languages are designed to be easy to read and 
             understand, making them widely used for structuring and presenting content on the web.",
@@ -114,57 +116,65 @@ pages = {
            
         ]; 
         items: [
-            "HEADING: Used to define a heading within a document. Headings are typically used to denote sections or subsections of content, providing structure and hierarchy to the document. They can vary in importance and size, often formatted differently to distinguish them from regular text.",
-            "AUTHOR: Used to specify the author of the document. This tag is essential for indicating who created or contributed to the content, especially in collaborative or academic settings where authorship attribution is crucial.",
-            "DATE: Used to specify the date of the document. This tag helps establish the timeline or versioning of the document, ensuring users can reference the most current or relevant information.",
-            "PARAGRAPHS: Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present information in cohesive blocks that are easier to read and comprehend.",
-            "ITEMS: Used to create a list of items. This tag is useful for structuring data or content into a list format, making it easier for readers to scan and understand sequential information.",
-            "FIGURES: Used to include figures with captions. Figures are often used to visually illustrate concepts or data within a document, with captions providing explanatory context for each figure.",
-            "CITATIONS: Used to include citations in the document. This tag is essential for referencing external sources or acknowledging borrowed content, ensuring proper attribution and credibility.",
-            "INVALID: This tag is reserved for error handling and should not be used in valid documents. It serves as a placeholder for managing unexpected or erroneous content within the markup language, helping maintain document integrity."
+            "\textbf{HEADING}: Used to define a heading within a document. Headings are typically used to denote sections of content, providing structure to the document.
+            They are formatted differently to distinguish them from regular text.Note that there is only one heading inside each page tag",
+            "\textbf{AUTHOR}: Used to specify the author of the document. This tag is essential for indicating who created or contributed to the content, especially in 
+            collaborative or academic settings where authorship attribution is crucial.",
+            "\textbf{DATE}: Used to specify the date of the document. This tag helps establish the timeline or versioning of the document, ensuring users can reference 
+            the most current or relevant information.",
+            "\textbf{PARAGRAPHS}: Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present
+            information in cohesive blocks that are easier to read and comprehend.",
+            "\textbf{ITEMS}: Used to create a list of items. This tag is useful for structuring data or content into a list format, making it easier for readers to 
+            scan and understand sequential information.",
+            "\textbf{FIGURES}: Used to include figures with captions. Figures are often used to visually illustrate concepts or data within a document,
+            with captions providing explanatory context for each figure.",
+            "\textbf{CITATIONS}: Used to include citations in the document. This tag is essential for referencing external sources or acknowledging borrowed content,
+            ensuring proper attribution and credibility."
         ]
-        paragraphs: [
-            "The above displayed content is using the ``items'' tag and this tag basically acts like an array in which each entry is separated by a ``,'' "
-           
-        ]; 
+        }
 
+    page3 = examples {
+    heading: "Examples of all tags";
+    title: "Heading Tag";
+    paragraphs: [
+        "Heading element is one of the fundamental components of any document. This tag is used only once per page. Note that heading is not an array and just takes in text input.
+        Typically, each page can be considered as a chapter, so we can add the heading tag only once in each page.You can create a new page to end that page and start the 
+        content from new page.The ``page-tag'' can now encompass multiple pages.An example of a heading is the chapter name displayed on top."
+    ];
+    title: "Title Tag";
+    paragraphs: [
+        "This tag plays a vital role in document making and is typically used to provide structure to the documents. This tag helps us divide each chapter/heading into subheadings.
+        Examples of the title tag are the subheadings on this page that categorize the tags."
+    ];
+    title: "Author, Paragraph, and Dates";
+    paragraphs: [
+        "Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present
+        information in cohesive blocks that are easier to read and comprehend. Unlike title and heading tags, these have an array data structure which helps the user add multiple 
+        paragraphs within the square brackets. Each paragraph is comma-separated and enclosed in quotes.",
+        "Let us take a look at paragraphs,author and date in the next page "
+    ];
+}
 
-    }
-
-    page3 = table_of_contents {
-        heading: "Table of Contents";
-        title: [
-            "This documentation is organized into the following sections to help you understand and utilize the features of our markup language effectively."
-        ];
-        items: [
-            "Introduction",
-            "Supported Tags",
-            "Usage Examples",
-            "Understanding Parsing",
-            "Conclusion",
-            "References"
-        ];
-    }
 
     page4 = chapter {
-        heading: "Supported Tags";
-        title: "Overview of Supported Tags";
-        paragraphs: [
-            "Our markup language supports a variety of tags to help you create rich and structured documents. Below is a detailed explanation of each supported tag:",
-            "1. TITLE: Used to define the title of a document or section.",
-            "2. SUBTITLE: Used to define the subtitle of a document or section.",
-            "3. HEADING: Used to define a heading within a document.",
-            "4. AUTHOR: Used to specify the author of the document.",
-            "5. DATE: Used to specify the date of the document.",
-            "6. PARAGRAPHS: Used to include one or more paragraphs of text.",
-            "7. ITEMS: Used to create a list of items.",
-            "8. FIGURES: Used to include figures with captions.",
-            "9. CITATIONS: Used to include citations in the document.",
-            "10. INVALID: This tag is reserved for error handling and should not be used in valid documents."
-        ];
-        figures: [
-            { src: "tags_overview.png", caption: "Overview of Supported Tags" }
-        ];
+        title: "Example Paragraph";
+      paragraphs: [
+        "A parser is a component of a compiler or interpreter that breaks down and interprets the syntactic structure of a given input. Typically, it converts a sequence
+        of characters into a structured format that a program can process. Parsers are crucial for interpreting programming languages, markup languages, and data formats,
+        allowing developers to analyze and manipulate structured data efficiently. There are various types of parsers, such as top-down parsers and bottom-up parsers,
+        each with specific algorithms and use cases. The role of a parser extends beyond simple syntax analysis, often involving error checking and recovery to ensure the 
+        robustness of the overall processing system.",
+        "Top-down parsers, like recursive descent parsers, start analyzing the highest-level constructs and break them down into their components. These parsers are often
+        easier to implement and understand, making them popular for educational purposes and simple language interpreters. They work by applying grammar rules to the input
+        from the topmost symbol and recursively processing the resulting symbols.",
+        "Bottom-up parsers, such as LR parsers, work in the opposite manner. They begin with the input symbols and attempt to construct the highest-level constructs by
+        combining the symbols into larger units step by step. These parsers are generally more powerful and can handle a wider range of languages, but they are also more
+        complex to implement. Bottom-up parsing is commonly used in compilers for programming languages due to its efficiency and robustness in handling ambiguous and complex
+        grammar rules."
+    ];
+    author:"Vaibhav Nayak";
+    date:"2024-06-17";
+
     }
 
     page5 = chapter {
