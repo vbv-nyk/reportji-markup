@@ -66,6 +66,7 @@ pages = {
 
         differences: [
             ["Characteristic", "Size", "Color", "Taste"],
+            ["Orange", "Like Apple", "Like Banana", "Best of both"],
             ["Apple", "Small", "Red", "Eating"],
             ["Banana", "Big", "Depends", "Satisfactory"]
         ];

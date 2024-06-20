@@ -77,16 +77,20 @@ char* parse_differences(ElementDefinition differences) {
     markup[0] = '\0';
     strcat(markup, "\\begin{table}[h!]\n");
     strcat(markup, "\\centering\n");
-    strcat(markup, "\\begin{tabular}{|");
+    strcat(markup, "\\begin{tabularx}{\\textwidth}{|");
     for(int i=0; i<differences.differences->count; i++){
         //printf("%d", differences.differences->count);
-        strcat(markup," c |");
+        strcat(markup," X |");
     }
     strcat(markup, "}\n");
     strcat(markup, "\\hline\n");
-    sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[0]->content[0]);
-    sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[1]->content[0]);
-    sprintf(markup + strlen(markup), "\\textbf{%s} \\\\ \\hline\n", differences.differences->differenceColumns[2]->content[0]);
+    for(int i=0; i<differences.differences->count; i++) {
+        if(i == differences.differences->count - 1) {
+            sprintf(markup + strlen(markup), "\\textbf{%s} \\\\ \\hline\n", differences.differences->differenceColumns[i]->content[0]);
+        } else {
+            sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[i]->content[0]);
+        }
+    }
     for(int j=1; j<differences.differences->differenceColumns[0]->rows_count; j++) {
         for(int i=0; i<differences.differences->count; i++) {
             if(i == differences.differences->count - 1) {
@@ -96,7 +100,7 @@ char* parse_differences(ElementDefinition differences) {
             }
         }
     }
-    strcat(markup, "\\end{tabular}\n");
+    strcat(markup, "\\end{tabularx}\n");
     strcat(markup, "\\label{table:1}\n");
     strcat(markup, "\\end{table}\n");
    return markup;

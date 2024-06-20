@@ -14,6 +14,7 @@ dprintf(fd, "\\usepackage{hyperref}\n");
 dprintf(fd, "\\usepackage{xcolor}\n");
 dprintf(fd, "\\usepackage{microtype}\n");
 dprintf(fd, "\\usepackage{color}\n");
+dprintf(fd, "\\usepackage{tabularx}\n");
 
 dprintf(fd, "\\definecolor{myorange}{RGB}{255, 165, 0}\n");
 // Add the titlesec package and chapter spacing configuration
