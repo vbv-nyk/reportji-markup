@@ -84,12 +84,15 @@ char* parse_differences(ElementDefinition differences) {
     }
     strcat(markup, "}\n");
     strcat(markup, "\\hline\n");
-    for(int j=0; j<differences.differences->differenceColumns[0]->rows_count; j++) {
+    sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[0]->content[0]);
+    sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[1]->content[0]);
+    sprintf(markup + strlen(markup), "\\textbf{%s} \\\\ \\hline\n", differences.differences->differenceColumns[2]->content[0]);
+    for(int j=1; j<differences.differences->differenceColumns[0]->rows_count; j++) {
         for(int i=0; i<differences.differences->count; i++) {
             if(i == differences.differences->count - 1) {
-                sprintf(markup + strlen(markup), "\\textbf{%s} \\\\ \\hline\n", differences.differences->differenceColumns[i]->content[j]);
+                sprintf(markup + strlen(markup), "%s \\\\ \\hline\n", differences.differences->differenceColumns[i]->content[j]);
             } else {
-                sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[i]->content[j]);                
+                sprintf(markup + strlen(markup), "%s & ", differences.differences->differenceColumns[i]->content[j]);                
             }
         }
     }
