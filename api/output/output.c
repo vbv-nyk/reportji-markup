@@ -76,6 +76,23 @@ char* parse_differences(ElementDefinition differences) {
    char* markup = (char*) malloc(1000);
    markup[0] = '\0';
 
+   strcat(markup, "\\begin{table}[h!]\n");
+    strcat(markup, "\\centering\n");
+    strcat(markup,"\\begin{tabular}{| m{3cm} | m{3cm} | m{3cm} |}\n");
+    strcat(markup, "\\hline\n");
+
+    for(int j=0; j<differences.differences->differenceColumns[0]->rows_count; j++) {
+        for(int i=0; i<differences.differences->count; i++) {
+            if(i == differences.differences->count - 1) {
+                sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[j]->content[i]);
+            } else {
+                sprintf(markup + strlen(markup), "\\textbf{%s} \\\ \\hline\n", differences.differences->differenceColumns[j]->content[i]);
+            }
+        }
+    }
+strcat(markup, "\\end{tabular}");
+strcat(markup, "\\label{table:1}");
+strcat(markup, "\\end{table}");
    return markup;
 }
 
