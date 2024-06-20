@@ -213,9 +213,9 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         Differences *differences = (Differences*)malloc(sizeof(Differences));
         int count = 0;
         differenceColumns = inflate_tables_data(outer_ptr, differenceColumns, &count);
-        printf("%s", differenceColumns[0]->content[0]);
         differences->count = count;
         differences->differenceColumns = differenceColumns;
+        element_definition->differences = differences;
     }
 }
 int create_elements(char* content, ElementType* elementTypes, Element** elements) {

@@ -72,6 +72,13 @@ char* parse_citations(ElementDefinition citations) {
    return markup;
 }
 
+char* parse_differences(ElementDefinition differences) {
+   char* markup = (char*) malloc(1000);
+   markup[0] = '\0';
+
+   return markup;
+}
+
 
 char* element_to_latex(Element* element) {
     switch(*element->type) {
@@ -93,6 +100,8 @@ char* element_to_latex(Element* element) {
             return parse_figures(*element->content);
         case CITATIONS:
             return parse_citations(*element->content);
+        case DIFFERENCES:
+            return parse_differences(*element->content);
     }
 }
 
