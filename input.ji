@@ -82,6 +82,11 @@ pages = {
             { src: "input_file.png", caption: "Code Structure" }
         ];
         
+        differences: [
+            ["Characteristic", "Size", "Color", "Taste"],
+            ["Apple", "Small", "Red", "It's about how you eat it"],
+            ["Banana", "Big", "Depends", "Satisfactory"]
+        ]
     }
 
     page2 = pages {

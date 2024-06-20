@@ -111,6 +111,9 @@ ElementType get_element_type(char* element_name) {
     if(strcmp(element_name, "citations") == 0) {
         return CITATIONS;
     }
+    if(strcmp(element_name, "differences") == 0) {
+        return DIFFERENCES;
+    }
     
     return INVALID;
 }

@@ -9,8 +9,8 @@ int main(int argc, char* argv[]) {
 
     create_pages();
     get_elements();
-    init_output();
-    write_markup_to_file();
+    //init_output();
+    //write_markup_to_file();
 
     return EXIT_SUCCESS;
 }

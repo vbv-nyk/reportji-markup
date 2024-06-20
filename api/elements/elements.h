@@ -48,6 +48,15 @@ typedef struct {
     int count;
 } Citations;
 
+typedef struct {
+    int rows_count;
+    char** content;
+} DifferenceColumns;
+
+typedef struct {
+    int count;
+    DifferenceColumns **differenceColumns;
+} Differences;
 
 
 typedef enum {
@@ -60,6 +69,7 @@ typedef enum {
     ITEMS,
     FIGURES,
     CITATIONS,
+    DIFFERENCES,
     INVALID
 } ElementType;
 
@@ -73,6 +83,7 @@ typedef union {
     Items *items;
     Figures *figures;
     Citations *citations;
+    Differences *differences;
 } ElementDefinition;
 
 typedef struct {

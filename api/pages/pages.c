@@ -107,6 +107,33 @@ FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureCon
     return figureContent;
 }
 
+DifferenceColumns** inflate_tables_data(char* outer_ptr, DifferenceColumns** differenceColumns, int *count) {
+    while(*outer_ptr != '\0') {
+        while(*outer_ptr != '[' && *outer_ptr != '\0') {
+            outer_ptr++;
+        }
+        if(*outer_ptr == '\0') {
+            return differenceColumns;
+        }
+        outer_ptr--;
+        int rows_count = 0;
+        char** text = (char**)malloc(sizeof(char*) * 1);
+        text = inflate_element_arrays(outer_ptr, text, &rows_count);
+        while(*outer_ptr != ']' && *(outer_ptr + 1) != '\0') {
+            outer_ptr++;
+        }
+        DifferenceColumns* differenceColumn = (DifferenceColumns*)malloc(sizeof(DifferenceColumns));
+        differenceColumn->content = text;
+        differenceColumn->rows_count = rows_count;
+        differenceColumns[*count] = differenceColumn;
+        *count = *count+ 1;
+        differenceColumns = realloc(differenceColumns, sizeof(DifferenceColumns*)* *count);
+        outer_ptr++;
+    }    
+    return differenceColumns;
+}
+
+
 char* load_element_definition(Element* element, ElementType* type, char* outer_ptr, int num_elements, ElementDefinition* element_definition) {
     if (*type == TITLE) {
         Title* title = (Title*)malloc(sizeof(Title));
@@ -180,6 +207,15 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         citations->count = count;
         citations->text = text;
         element_definition->citations = citations;
+    } else if(*type == DIFFERENCES) {
+        element->type = type;
+        DifferenceColumns** differenceColumns = (DifferenceColumns**)malloc(sizeof(DifferenceColumns*) * 1);
+        Differences *differences = (Differences*)malloc(sizeof(Differences));
+        int count = 0;
+        differenceColumns = inflate_tables_data(outer_ptr, differenceColumns, &count);
+        printf("%s", differenceColumns[0]->content[0]);
+        differences->count = count;
+        differences->differenceColumns = differenceColumns;
     }
 }
 int create_elements(char* content, ElementType* elementTypes, Element** elements) {
