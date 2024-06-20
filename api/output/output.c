@@ -54,7 +54,7 @@ char* parse_figures(ElementDefinition figures) {
    for(int i=0; i<figures.figures->count; i++) {
        sprintf(markup + strlen(markup), "\\includegraphics{sample.png}\n\\caption{%s}\n", figures.figures->figureContent[i]->caption);
    }
-   strcat(markup, "\\end{figure}");
+   strcat(markup, "\\end{figure}\n");
    return markup;
 }
 
@@ -73,26 +73,29 @@ char* parse_citations(ElementDefinition citations) {
 }
 
 char* parse_differences(ElementDefinition differences) {
-   char* markup = (char*) malloc(1000);
-   markup[0] = '\0';
-
-   strcat(markup, "\\begin{table}[h!]\n");
+    char* markup = (char*) malloc(10000);
+    markup[0] = '\0';
+    strcat(markup, "\\begin{table}[h!]\n");
     strcat(markup, "\\centering\n");
-    strcat(markup,"\\begin{tabular}{| m{3cm} | m{3cm} | m{3cm} |}\n");
+    strcat(markup, "\\begin{tabular}{|");
+    for(int i=0; i<differences.differences->count; i++){
+        //printf("%d", differences.differences->count);
+        strcat(markup," c |");
+    }
+    strcat(markup, "}\n");
     strcat(markup, "\\hline\n");
-
     for(int j=0; j<differences.differences->differenceColumns[0]->rows_count; j++) {
         for(int i=0; i<differences.differences->count; i++) {
             if(i == differences.differences->count - 1) {
-                sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[j]->content[i]);
+                sprintf(markup + strlen(markup), "\\textbf{%s} \\\\ \\hline\n", differences.differences->differenceColumns[i]->content[j]);
             } else {
-                sprintf(markup + strlen(markup), "\\textbf{%s} \\\ \\hline\n", differences.differences->differenceColumns[j]->content[i]);
+                sprintf(markup + strlen(markup), "\\textbf{%s} & ", differences.differences->differenceColumns[i]->content[j]);                
             }
         }
     }
-strcat(markup, "\\end{tabular}");
-strcat(markup, "\\label{table:1}");
-strcat(markup, "\\end{table}");
+    strcat(markup, "\\end{tabular}\n");
+    strcat(markup, "\\label{table:1}\n");
+    strcat(markup, "\\end{table}\n");
    return markup;
 }
 

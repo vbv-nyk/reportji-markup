@@ -55,7 +55,7 @@ char* load_element_content(ElementType type, char* outer_ptr, int num_elements) 
 }
 char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
-        char* output = (char*)malloc(1000);
+        char* output = (char*)malloc(10000);
         content_between_quotes(output, outer_ptr);
         while(*outer_ptr != '\"' && *outer_ptr != ']') {
             outer_ptr++;
@@ -108,11 +108,11 @@ FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureCon
 }
 
 DifferenceColumns** inflate_tables_data(char* outer_ptr, DifferenceColumns** differenceColumns, int *count) {
-    while(*outer_ptr != '\0') {
+    while(*outer_ptr != ';') {
         while(*outer_ptr != '[' && *outer_ptr != '\0') {
             outer_ptr++;
         }
-        if(*outer_ptr == '\0') {
+        if(*outer_ptr == ';') {
             return differenceColumns;
         }
         outer_ptr--;
@@ -126,8 +126,9 @@ DifferenceColumns** inflate_tables_data(char* outer_ptr, DifferenceColumns** dif
         differenceColumn->content = text;
         differenceColumn->rows_count = rows_count;
         differenceColumns[*count] = differenceColumn;
-        *count = *count+ 1;
-        differenceColumns = realloc(differenceColumns, sizeof(DifferenceColumns*)* *count);
+        *count = *count + 1;
+        //printf("%d", *count);
+        differenceColumns = realloc(differenceColumns, sizeof(DifferenceColumns*)* (*count + 1));
         outer_ptr++;
     }    
     return differenceColumns;
@@ -213,7 +214,7 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         Differences *differences = (Differences*)malloc(sizeof(Differences));
         int count = 0;
         differenceColumns = inflate_tables_data(outer_ptr, differenceColumns, &count);
-        differences->count = count;
+        differences->count = count - 1;
         differences->differenceColumns = differenceColumns;
         element_definition->differences = differences;
     }

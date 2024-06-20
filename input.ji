@@ -64,6 +64,11 @@ pages = {
             
         ];
 
+        differences: [
+            ["Characteristic", "Size", "Color", "Taste"],
+            ["Apple", "Small", "Red", "Eating"],
+            ["Banana", "Big", "Depends", "Satisfactory"]
+        ];
         paragraphs: [
             "Figure 1.1 Represents the file structure.
             The \textbf{styles} object defines various formatting rules such as font size, line spacing, font family, and more. These rules are tailored for different 
@@ -75,18 +80,10 @@ pages = {
             "The output object organizes the main content of the document by referencing specific pages from the pages object.
             These pages are intended to be rendered or outputted together as part of the final document, ensuring that the structured content defined in pages is 
             presented in a cohesive ``manner''."
-
-           
         ];
         figures: [
             { src: "input_file.png", caption: "Code Structure" }
         ];
-        
-        differences: [
-            ["Characteristic", "Size", "Color", "Taste"],
-            ["Apple", "Small", "Red", "It's about how you eat it"],
-            ["Banana", "Big", "Depends", "Satisfactory"]
-        ]
     }
 
     page2 = pages {

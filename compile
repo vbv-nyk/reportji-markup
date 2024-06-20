@@ -2,4 +2,4 @@ make clean
 make
 ./main input.ji
 pdflatex -interaction=nonstopmode output.tex
-okular  output.pdf
+sioyek  output.pdf
