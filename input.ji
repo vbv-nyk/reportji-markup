@@ -1,55 +1,4 @@
 styles = {
-    universal {
-        font_size: 12pt;
-        line_spacing: 1.5;
-        font_family: "Times New Roman";
-        page_size: "A4";
-        margin_top: 1in;
-        margin_bottom: 1in;
-        margin_left: 1in;
-        margin_right: 1in;
-    }
-
-    front_page {
-        title_size: 24pt;
-        title_bold: true;
-        author_size: 18pt;
-        author_italic: true;
-        date_size: 14pt;
-    }
-
-    acknowledgements {
-        heading_size: 20pt;
-        heading_bold: true;
-        text_size: 12pt;
-    }
-
-    table_of_contents {
-        heading_size: 20pt;
-        heading_bold: true;
-        text_size: 12pt;
-    }
-
-    chapter {
-        title_size: 24pt;
-        title_bold: true;
-        subtitle_size: 18pt;
-        subtitle_italic: true;
-        subheading_size: 20pt;
-        subheading_bold: true;
-        text_size: 12pt;
-    }
-
-    figure {
-        caption_size: 12pt;
-        caption_italic: true;
-    }
-
-    table {
-        heading_size: 12pt;
-        heading_bold: true;
-        text_size: 12pt;
-    }
 }
 
 pages = {
@@ -65,10 +14,10 @@ pages = {
         ];
 
         differences: [
-            ["Characteristic", "Size", "Color", "Taste"],
-            ["Orange", "Like Apple", "Like Banana", "Best of both"],
-            ["Apple", "Small", "Red", "Eating"],
-            ["Banana", "Big", "Depends", "Satisfactory"]
+            ["Characteristic", "Size", "Color", "Taste"]
+            ,["Orange", "Like Apple", "Like Banana", "Best of both"]
+            ,["Apple", "Small", "Red", "Eating"]
+            ,["Banana", "Big", "Depends", "Satisfactory"]
         ];
         paragraphs: [
             "Figure 1.1 Represents the file structure.
@@ -230,10 +179,4 @@ pages = {
 }
 
 output = {
-    global {
-        page1,
-        page2,
-        page3,
-        page4
-    }
 }

@@ -8,6 +8,9 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <locale.h>
+#include <time.h> 
+#include <sys/time.h> 
 #include "error.h"
 #include "files.h"  
 #include "elements/elements.h"

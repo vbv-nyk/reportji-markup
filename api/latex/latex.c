@@ -1,6 +1,8 @@
 #include "latex.h"
 
-void write_markup_to_file() {
+void write_markup_to_file(struct tm *broken_time) {
+
+
     mode_t mode = S_IRUSR | S_IWUSR  | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
     int fd = open("output.tex", O_RDWR | O_TRUNC | O_CREAT, mode);
 dprintf(fd, "\\documentclass[oneside]{book}\n");
@@ -34,7 +36,7 @@ dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{VTU College Report}}\n");
 dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
 dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of XYZ}}\n");
 dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
-dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{15 June 2024}}\n");
+dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{%d %d %d %d %d}}\n", broken_time->tm_mon, broken_time->tm_hour, broken_time->tm_hour);
 
 dprintf(fd, "\\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");
 dprintf(fd, "\\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n");
