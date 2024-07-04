@@ -6,7 +6,7 @@ pages = {
         heading: "A Comprehensive Guide";
         title: "Introduction";
         paragraphs: [
-            "\textbf{Efficient report creation} can often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
+            "\textbf{Efficient report creation} \quotes{can} often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
              into an engaging and streamlined experience. We aim to enhance productivity and reduce the perceived complexity associated with generating reports,
              thereby fostering a more enjoyable and efficient workflow.In the coming sections , we will see the working of the project and thereby learn to use this
               report generation tool."
@@ -22,14 +22,12 @@ pages = {
         paragraphs: [
             "Figure 1.1 Represents the file structure.
             The \textbf{styles} object defines various formatting rules such as font size, line spacing, font family, and more. These rules are tailored for different 
-            sections of a report or document. For example, styles may dictate how headings, paragraphs, figures, and tables are formatted throughout the document 
-            to ensure consistency and professionalism.",
-            "The pages object specifies individual pages that make up the content of the report. Each page is formatted according to the 
+            sections of a \square{Hello World} report or document. For example, styles may dictate how headings, paragraphs, figures, and tables are formatted throughout the document 
+            to ensure consistency and professionalism.","The pages object specifies individual pages that make up the content of the report. Each page is formatted according to the 
             rules defined in the 'styles' object and contains specific content, such as paragraphs, headings, figures, and lists.Each page contributes to presenting a 
-            comprehensive guide with structured content and appropriate formatting styles defined in the styles object.",
-            "The output object organizes the main content of the document by referencing specific pages from the pages object.
+            comprehensive guide with structured content and appropriate formatting styles defined in the styles object.","The output object organizes the main content of the document by referencing specific pages from the pages object.
             These pages are intended to be rendered or outputted together as part of the final document, ensuring that the structured content defined in pages is 
-            presented in a cohesive ``manner''."
+            presented in a cohesive ``manner''.",
         ];
         figures: [
             { src: "input_file.png", caption: "Code Structure" }
@@ -83,54 +81,53 @@ pages = {
             ensuring proper attribution and credibility.The citations tag creates a new Page and name it as ``Bibliography'' and place all the contents in it.It uses 
             an array data structure similar to that of paragraph and item."
         ]
-        }
+    }
 
     page3 = examples {
-    heading: "Examples of all tags";
-    title: "Heading Tag";
-    paragraphs: [
-        "Heading element is one of the fundamental components of any document. This tag is used only once per page. Note that heading is not an array and just takes in text input.
-        Typically, each page can be considered as a chapter, so we can add the heading tag only once in each page.You can create a new page to end that page and start the 
-        content from new page.The ``page-tag'' can now encompass multiple pages.An example of a heading is the chapter name displayed on top."
-    ];
-    title: "Title Tag";
-    paragraphs: [
-        "This tag plays a vital role in document making and is typically used to provide structure to the documents. This tag helps us divide each chapter/heading into subheadings.
-        Examples of the title tag are the subheadings on this page that categorize the tags."
-    ];
-    title: "Author, Paragraph, and Dates";
-    paragraphs: [
-        "Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present
-        information in cohesive blocks that are easier to read and comprehend. Unlike title and heading tags, these have an array data structure which helps the user add multiple 
-        paragraphs within the square brackets. Each paragraph is comma-separated and enclosed in quotes.",
-        "Next, we will examine the implementation and usage of paragraphs, the author tag, and the date tag in the following section"
-    ];
-}
+        heading: "Examples of all tags";
+        title: "Heading Tag";
+        paragraphs: [
+            "Heading element is one of the fundamental components of any document. This tag is used only once per page. Note that heading is not an array and just takes in text input.
+            Typically, each page can be considered as a chapter, so we can add the heading tag only once in each page.You can create a new page to end that page and start the 
+            content from new page.The ``page-tag'' can now encompass multiple pages.An example of a heading is the chapter name displayed on top."
+        ];
+        title: "Title Tag";
+        paragraphs: [
+            "This tag plays a vital role in document making and is typically used to provide structure to the documents. This tag helps us divide each chapter/heading into subheadings.
+            Examples of the title tag are the subheadings on this page that categorize the tags."
+        ];
+        title: "Author, Paragraph, and Dates";
+        paragraphs: [
+            "Used to include one or more paragraphs of text. Paragraph tags are fundamental for organizing textual content, allowing authors to present
+            information in cohesive blocks that are easier to read and comprehend. Unlike title and heading tags, these have an array data structure which helps the user add multiple 
+            paragraphs within the square brackets. Each paragraph is comma-separated and enclosed in quotes.",
+            "Next, we will examine the implementation and usage of paragraphs, the author tag, and the date tag in the following section"
+        ];
+    }
 
     page4 = chapter {
-        title: "Example Paragraph on Parser";
-      paragraphs: [
-        "A \textbf{parser} is a component of a compiler or interpreter that breaks down and interprets the syntactic structure of a given input. Typically, it converts a sequence
-        of characters into a structured format that a program can process. Parsers are crucial for interpreting programming languages, markup languages, and data formats,
-        allowing developers to analyze and manipulate structured data efficiently. There are various types of parsers, such as top-down parsers and bottom-up parsers,
-        each with specific algorithms and use cases. The role of a parser extends beyond simple syntax analysis, often involving error checking and recovery to ensure the 
-        robustness of the overall processing system.",
-        "\textbf{Top-down} parsers, like recursive descent parsers, start analyzing the highest-level constructs and break them down into their components. These parsers are often
-        easier to implement and understand, making them popular for educational purposes and simple language interpreters. They work by applying grammar rules to the input
-        from the topmost symbol and recursively processing the resulting symbols.",
-        "textbf{Bottom-up} parsers, such as LR parsers, work in the opposite manner. They begin with the input symbols and attempt to construct the highest-level constructs by
-        combining the symbols into larger units step by step. These parsers are generally more powerful and can handle a wider range of languages, but they are also more
-        complex to implement. Bottom-up parsing is commonly used in compilers for programming languages.",
-        "The parser, when creating report,works by analyzing the input text line by line, identifying the tags, and mapping them to the appropriate \textbf{LaTeX commands}.
-        For example, a heading tag in the markup language would be converted to the equivalent LaTeX command for headings, ensuring that the document's structure is preserved. This process not only
-        automates the conversion but also ensures that the resulting LaTeX code is clean, well-organized, and free from errors.",
-        "By automating the translation from markup language to LaTeX, the parser significantly reduces the manual effort required to create professional documents.
-         Users can focus on writing content using a simpler, more intuitive syntax, while the parser takes care of the complex formatting details.
-          This not only saves time but also makes the process accessible to those who may not be familiar with LaTeX, broadening the range of users who can benefit from this powerful typesetting system."
-
-    ];
-    author:"Vaibhav Nayak";
-    date:"2024-06-17";
+            title: "Example Paragraph on Parser";
+          paragraphs: [
+            "A \textbf{parser} is a component of a compiler or interpreter that breaks down and interprets the syntactic structure of a given input. Typically, it converts a sequence
+            of characters into a structured format that a program can process. Parsers are crucial for interpreting programming languages, markup languages, and data formats,
+            allowing developers to analyze and manipulate structured data efficiently. There are various types of parsers, such as top-down parsers and bottom-up parsers,
+            each with specific algorithms and use cases. The role of a parser extends beyond simple syntax analysis, often involving error checking and recovery to ensure the 
+            robustness of the overall processing system.",
+            "\textbf{Top-down} parsers, like recursive descent parsers, start analyzing the highest-level constructs and break them down into their components. These parsers are often
+            easier to implement and understand, making them popular for educational purposes and simple language interpreters. They work by applying grammar rules to the input
+            from the topmost symbol and recursively processing the resulting symbols.",
+            "textbf{Bottom-up} parsers, such as LR parsers, work in the opposite manner. They begin with the input symbols and attempt to construct the highest-level constructs by
+            combining the symbols into larger units step by step. These parsers are generally more powerful and can handle a wider range of languages, but they are also more
+            complex to implement. Bottom-up parsing is commonly used in compilers for programming languages.",
+            "The parser, when creating report,works by analyzing the input text line by line, identifying the tags, and mapping them to the appropriate \textbf{LaTeX commands}.
+            For example, a heading tag in the markup language would be converted to the equivalent LaTeX command for headings, ensuring that the document's structure is preserved. This process not only
+            automates the conversion but also ensures that the resulting LaTeX code is clean, well-organized, and free from errors.",
+            "By automating the translation from markup language to LaTeX, the parser significantly reduces the manual effort required to create professional documents.
+             Users can focus on writing content using a simpler, more intuitive syntax, while the parser takes care of the complex formatting details.
+              This not only saves time but also makes the process accessible to those who may not be familiar with LaTeX, broadening the range of users who can benefit from this powerful typesetting system."
+        ];
+        author:"Vaibhav Nayak";
+        date:"2024-06-17";
 
     }
     page7 = chapter {

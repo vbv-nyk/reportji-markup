@@ -32,6 +32,10 @@ dprintf(fd, "\\usepackage{fancyhdr}\n");
 dprintf(fd, "\\pagestyle{fancy}\n");
 dprintf(fd, "\\fancyhf{}\n");
 
+dprintf(fd, "\\newcommand{\\square}[1]{[ #1 ]}\n");
+dprintf(fd, "\\newcommand{\\round}[1]{( #1 )}\n");
+dprintf(fd, "\\newcommand{\\curly}[1]{\\{ #1 \\}}\n");
+dprintf(fd, "\\newcommand{\\quotes}[1]{\"#1\"}\n");
 dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{VTU College Report}}\n");
 dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
 dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of XYZ}}\n");
