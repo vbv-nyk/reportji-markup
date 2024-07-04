@@ -8,13 +8,10 @@ void write_markup_to_file(struct tm *broken_time) {
 dprintf(fd, "\\documentclass[oneside]{book}\n");
 dprintf(fd, "\\usepackage[T1]{fontenc}\n");
 dprintf(fd, "\\usepackage{graphicx}\n");
-dprintf(fd, "\\usepackage{grffile}\n");
- dprintf(fd, "\\usepackage{tocloft}\n"); // Include tocloft package
 dprintf(fd, "\\usepackage{mathptmx}\n");
 dprintf(fd, "\\usepackage[a4paper, total={6in, 8in}]{geometry}\n");
 dprintf(fd, "\\usepackage{hyperref}\n");
 dprintf(fd, "\\usepackage{xcolor}\n");
-dprintf(fd, "\\usepackage{microtype}\n");
 dprintf(fd, "\\usepackage{color}\n");
 dprintf(fd, "\\usepackage{tabularx}\n");
 
@@ -32,6 +29,7 @@ dprintf(fd, "\\usepackage{fancyhdr}\n");
 dprintf(fd, "\\pagestyle{fancy}\n");
 dprintf(fd, "\\fancyhf{}\n");
 
+dprintf(fd, "\\DeclareUnicodeCharacter{2212}{\\ensuremath{-}}");
 dprintf(fd, "\\newcommand{\\square}[1]{[ #1 ]}\n");
 dprintf(fd, "\\newcommand{\\round}[1]{( #1 )}\n");
 dprintf(fd, "\\newcommand{\\curly}[1]{\\{ #1 \\}}\n");

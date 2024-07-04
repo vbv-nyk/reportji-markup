@@ -1,6 +1,5 @@
 make clean
 make
 ./main input.ji
-pdflatex -interaction=nonstopmode output.tex
-pdflatex -interaction=nonstopmode output.tex
+pdflatex output.tex
 sioyek  output.pdf

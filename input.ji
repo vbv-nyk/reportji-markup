@@ -6,7 +6,7 @@ pages = {
         heading: "A Comprehensive Guide";
         title: "Introduction";
         paragraphs: [
-            "\textbf{Efficient report creation} \quotes{can} often be perceived as a daunting task. Through this project, our objective is to transform the report-making process
+            "\textbf{Efficient report creation} \quotes{can} often be perceived as a daunting task. Through this, our objective is to transform the report-making process
              into an engaging and streamlined experience. We aim to enhance productivity and reduce the perceived complexity associated with generating reports,
              thereby fostering a more enjoyable and efficient workflow.In the coming sections , we will see the working of the project and thereby learn to use this
               report generation tool."
