@@ -18,7 +18,7 @@ void create_pages() {
         if (strstr(find_str, "=") != NULL) {
             char* name = (char*)malloc(100);
             char* style = (char*)malloc(100);
-            char* content = (char*)malloc(30000);
+            char* content = (char*)malloc(100000);
             name[0] = '\0';
             content[0] = '\0';
 
@@ -49,7 +49,7 @@ void create_pages() {
 }
 
 char* load_element_content(ElementType type, char* outer_ptr, int num_elements) {
-    char* element_content = (char*)malloc(1000);
+    char* element_content = (char*)malloc(10000);
     content_between_quotes(element_content, outer_ptr);
     return element_content;
 }
@@ -57,6 +57,7 @@ char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
         char* output = (char*)malloc(10000);
         content_between_quotes(output, outer_ptr);
+    
         while(*outer_ptr != '\"' && *outer_ptr != ']') {
             outer_ptr++;
         }

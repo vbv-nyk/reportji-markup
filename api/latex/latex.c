@@ -58,11 +58,12 @@ dprintf(fd, "}\n");
 dprintf(fd, "\\linespread{1.5}\n");
 dprintf(fd,"\\usepackage{float}\n");
 dprintf(fd,"\\restylefloat{figure}\n");
-dprintf(fd,"\\lstset{\n");
-dprintf(fd,"backgroundcolor=\\color{white},\n");
-dprintf(fd,"escapeinside={||}\n");
-dprintf(fd,"}\n");
-
+dprintf(fd, "\\lstset{\n");
+dprintf(fd, "  backgroundcolor=\\color{white},\n");
+dprintf(fd, "  basicstyle=\\ttfamily\\color{black},\n");
+dprintf(fd, "  escapeinside={||},\n");
+dprintf(fd, "  lineskip=2pt,\n"); // Adjust the value as needed
+dprintf(fd, "}\n");
 dprintf(fd, "\\begin{document}\n");
 
 
