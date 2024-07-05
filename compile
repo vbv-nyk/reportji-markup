@@ -1,5 +1,6 @@
 make clean
 make
+cp main ../reportji-backend
 ./main input.ji
 pdflatex output.tex
 sioyek  output.pdf

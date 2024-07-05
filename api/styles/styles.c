@@ -4,7 +4,7 @@ char* style_from_name(char* name) {
     char* inner_ptr = NULL;
     char* search_string = strdup(sections.styles);
     char* token = strtok_r(search_string, "\n", &inner_ptr);
-   char* output = (char*)malloc(1000);
+   char* output = (char*)malloc(50000);
     
     while(token != NULL) {
        char *find_str = strdup(token);
