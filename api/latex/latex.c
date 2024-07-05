@@ -7,7 +7,9 @@ void write_markup_to_file(struct tm *broken_time) {
     int fd = open("output.tex", O_RDWR | O_TRUNC | O_CREAT, mode);
 dprintf(fd, "\\documentclass[oneside]{book}\n");
 dprintf(fd, "\\usepackage[T1]{fontenc}\n");
-dprintf(fd, "\\usepackage{graphicx}\n");
+// dprintf(fd, "\\usepackage{graphicx}\n");
+dprintf(fd, "\\usepackage{grffile}\n");
+ dprintf(fd, "\\usepackage{tocloft}\n"); // Include tocloft package
 dprintf(fd, "\\usepackage{mathptmx}\n");
 dprintf(fd, "\\usepackage[a4paper, total={6in, 8in}]{geometry}\n");
 dprintf(fd, "\\usepackage{hyperref}\n");
