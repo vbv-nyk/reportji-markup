@@ -55,8 +55,9 @@ char* load_element_content(ElementType type, char* outer_ptr, int num_elements) 
 }
 char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
-        char* output = (char*)malloc(10000);
-        content_between_quotes(output, outer_ptr);
+        char* output = (char*)malloc(10000);;
+        int new_size = content_between_quotes(output, outer_ptr);
+   printf("%s", outer_ptr);
     
         while(*outer_ptr != '\"' && *outer_ptr != ']') {
             outer_ptr++;
@@ -66,9 +67,9 @@ char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
         while(*outer_ptr != '\"' && *outer_ptr != ']') {
             outer_ptr++;
         }
+        text[*count] = (output);
         if(*outer_ptr == ']') break;
         outer_ptr++;
-        text[*count] = output;
         *count = *count + 1;
         text = realloc(text, sizeof(char*) * (*count + 1));
     }
@@ -141,35 +142,35 @@ char* load_element_definition(Element* element, ElementType* type, char* outer_p
         Title* title = (Title*)malloc(sizeof(Title));
         char* content = (char*)malloc(1000);
         element->type = type;
-        content = load_element_content(*type, outer_ptr, num_elements);
+        content = (load_element_content(*type, outer_ptr, num_elements));
         title->text = content;
         element_definition->title = title;
     } else if (*type == SUBTITLE) {
         Subtitle* subtitle = (Subtitle*)malloc(sizeof(Subtitle));
         char* content = (char*)malloc(1000);
         element->type = type;
-        content = load_element_content(*type, outer_ptr, num_elements);
+        content = (load_element_content(*type, outer_ptr, num_elements));
         subtitle->text = content;
         element_definition->subtitle = subtitle;
     } else if (*type == HEADING) {
         Heading* heading = (Heading*)malloc(sizeof(Heading));
         char* content = (char*)malloc(1000);
         element->type = type;
-        content = load_element_content(*type, outer_ptr, num_elements);
+        content = (load_element_content(*type, outer_ptr, num_elements));
         heading->text = content;
         element_definition->heading = heading;
     } else if (*type == AUTHOR) {
         Author* author = (Author*)malloc(sizeof(Author));
         char* content = (char*)malloc(1000);
         element->type = type;
-        content = load_element_content(*type, outer_ptr, num_elements);
+        content = (load_element_content(*type, outer_ptr, num_elements));
         author->text = content;
         element_definition->author = author;
     } else if (*type == DATE) {
         Date* date = (Date*)malloc(sizeof(Date));
         char* content = (char*)malloc(1000);
         element->type = type;
-        content = load_element_content(*type, outer_ptr, num_elements);
+        content = (load_element_content(*type, outer_ptr, num_elements));
         date->text = content;
         element_definition->date = date;
     } else if (*type == PARAGRAPHS) {

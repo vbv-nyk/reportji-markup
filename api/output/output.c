@@ -28,7 +28,7 @@ char* parse_date(ElementDefinition date) {
    return markup;
 }
 char* parse_paragraphs(ElementDefinition paragraphs) {
-   char* markup = (char*) malloc(10000);
+   char* markup = (char*) malloc(1000000);
    sprintf(markup, "%s\\par\n", paragraphs.paragraphs->text[0]);
 
    for(int i=1; i<paragraphs.paragraphs->count; i++)  {
@@ -38,7 +38,7 @@ char* parse_paragraphs(ElementDefinition paragraphs) {
 }
 
 char* parse_items(ElementDefinition items) {
-   char* markup = (char*) malloc(10000);
+   char* markup = (char*) malloc(1000000);
    markup[0] = '\0';
    strcat(markup, "\\begin{itemize}\n");
    for(int i=0; i<items.items->count; i++)  {
@@ -59,7 +59,7 @@ char* parse_figures(ElementDefinition figures) {
 }
 
 char* parse_citations(ElementDefinition citations) {
-   char* markup = (char*) malloc(1000);
+   char* markup = (char*) malloc(1000000);
    markup[0] = '\0';
    strcat(markup, "\\begin{thebibliography}{100}\n");
 
@@ -73,7 +73,7 @@ char* parse_citations(ElementDefinition citations) {
 }
 
 char* parse_differences(ElementDefinition differences) {
-    char* markup = (char*) malloc(10000);
+    char* markup = (char*) malloc(1000000);
     markup[0] = '\0';
     strcat(markup, "\\begin{table}[h!]\n");
     strcat(markup, "\\centering\n");
