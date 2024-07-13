@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     broken_time = localtime(&ts_epoch);
 
     create_pages();
-    get_elements();
+    // get_elements();
     // init_output();
     // write_markup_to_file(broken_time);
 

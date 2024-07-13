@@ -18,7 +18,7 @@ void create_pages() {
         if (strstr(find_str, "=") != NULL) {
             char* name = (char*)malloc(100);
             char* style = (char*)malloc(100);
-            char* content = (char*)malloc(10000);
+            char* content = (char*)malloc(1000000);
             name[0] = '\0';
             content[0] = '\0';
 
