@@ -1,6 +1,7 @@
 make clean
 make
 cp main ../reportji-backend
+cp main ../reportji-backend-prod
 ./main input.ji
 pdflatex output.tex
 sioyek  output.pdf

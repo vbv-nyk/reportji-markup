@@ -2,16 +2,27 @@ stlyes = {
 }
 pages = {
 page0 = page {
-     heading: "A test document";
-     title: "Reason for this report";
+     heading: "Hello World";
+     title: "Something";
+     figures: [
+          { src: "input_file.png", caption: "Test" }
+     ];
      paragraphs: [
-          "Ut sit amet tellus euismod, aliquam neque quis, hendrerit arcu. Mauris faucibus condimentum purus a sagittis. Nunc in quam nec est efficitur sodales. Fusce et justo porttitor neque maximus vulputate mattis sit amet diam. Morbi iaculis nulla id eros ullamcorper malesuada. Duis pellentesque dictum mauris, a tempor felis rhoncus sit amet. Nunc pharetra semper augue sit amet tempus. Integer sapien purus, scelerisque vel commodo at, molestie nec elit. Nullam efficitur nunc sit amet nisl luctus, a euismod justo commodo. Maecenas et dapibus diam, non viverra ante. Nullam sollicitudin dapibus dignissim. In nec massa malesuada, porttitor mauris et, placerat tellus. Phasellus dui sapien, tempus ut eros id, scelerisque egestas sapien. Phasellus ligula dolor, porttitor ac tellus et, fermentum varius quam. Ut maximus, eros vel egestas varius, nibh elit scelerisque metus, vel iaculis sapien tortor in eros. In semper leo eget elit dapibus commodo.",
-          "Nunc vulputate sollicitudin purus, quis sollicitudin magna sollicitudin a. Cras vitae nulla neque. Donec in elit vel purus sodales mollis ac sit amet urna. Fusce a lobortis diam. Pellentesque et ornare quam. In et dui sapien. Etiam congue eget quam non tincidunt. Proin egestas venenatis consectetur. Vestibulum at blandit velit. Aliquam sed sollicitudin felis. Sed dictum urna id elit porttitor pharetra. Phasellus consectetur urna at nulla vulputate egestas.",
-          "Phasellus dapibus, orci sit amet ullamcorper accumsan, justo ante eleifend lorem, vel blandit purus ligula a metus. Sed in pharetra risus. Pellentesque sit amet diam eu nisi venenatis hendrerit. Nam dignissim nibh dapibus augue vulputate semper. Etiam leo nisi, efficitur vel volutpat eget, rhoncus nec elit. Aliquam porta placerat odio, semper posuere neque feugiat at. Suspendisse fringilla volutpat leo ut luctus. Mauris eleifend nisl eget imperdiet ultrices. Aliquam id neque bibendum, faucibus enim non, eleifend tellus. Suspendisse maximus maximus fermentum.",
-          "Aenean libero tortor, condimentum et sapien nec, ullamcorper viverra velit. Nulla porta nec ante ac congue. Maecenas sed magna eu arcu mattis congue vel sed justo. Maecenas ac sagittis lacus, pharetra ultricies tortor. Sed sodales pretium velit id accumsan. Morbi rhoncus vitae libero quis ultricies. Ut arcu tortor, faucibus vel tortor vitae, tristique accumsan dolor. Integer quis quam et purus aliquam varius id eu risus. Pellentesque sed quam at erat tristique dictum. Donec elit arcu, sagittis sed consectetur molestie, fringilla vitae massa. Vestibulum ligula justo, volutpat vestibulum ex at, facilisis accumsan nunc. Etiam vestibulum libero nulla, ut elementum augue faucibus eget.",
-          "Integer purus nisl, consequat ut mauris sit amet, vehicula finibus erat. Pellentesque ut facilisis orci. Sed vitae purus euismod, condimentum tellus semper, tempus tortor. Proin metus quam, viverra vel pulvinar vel, congue vel risus. Suspendisse ut imperdiet est. In lacinia scelerisque ipsum, ut laoreet lectus sagittis vel. Integer ac rutrum mauris. Ut elementum nibh in dui egestas porttitor sed eu lorem. Proin eleifend urna quis ante iaculis tincidunt. Morbi et purus vitae odio finibus bibendum eu eu magna.",
-          "Maecenas varius purus eros, vitae pulvinar ligula tincidunt aliquam. Quisque viverra laoreet sapien, ut dignissim ligula varius vitae. Donec in nisi sed ante porta bibendum quis in eros. Nulla luctus mollis nunc vitae tristique. Morbi rutrum lorem vitae lacus volutpat, quis tristique justo euismod. Etiam mi nibh, tincidunt at odio quis, dignissim pellentesque mi. Praesent gravida dignissim porttitor. In lorem mauris, ullamcorper sed eleifend ut, tincidunt ut erat. Pellentesque nec pulvinar lacus. Duis vitae eros est. In vitae blandit nibh. Donec pharetra dolor vulputate auctor aliquam. Fusce quis sollicitudin tellus. Sed eget libero nisl.",
-     ]
+          "\osquare{}\osquare{}\osquare{}\osquare{}\osquare{}",
+];
+     paragraphs: [
+          "Hello Worldd",
+];
+     title: "Introduction";
+     paragraphs: [
+          "TaskMaster is a productivity application designed to streamline task management for individuals and teams. By providing an intuitive interface and powerful organizational tools, TaskMaster aims to enhance efficiency and help users stay on top of their responsibilities.",
+];
+     title: "Features";
+     items: [
+          "Task Creation and Categorization: Users can easily create tasks, assign deadlines, and categorize them by project or priority.",
+          "Collaboration Tools: The software enables users to share tasks with team members, set permissions, and leave comments, fostering effective communication.",
+          "Analytics Dashboard: An integrated dashboard provides insights into task completion rates and productivity trends, helping users identify areas for improvement.",
+];
 }
 }
 output = {
