@@ -50,13 +50,13 @@ void create_pages() {
 }
 
 char* load_element_content(ElementType type, char* outer_ptr, int num_elements) {
-    char* element_content = (char*)malloc(10000);
+    char* element_content = (char*)malloc(1000000);
     content_between_quotes(element_content, outer_ptr);
     return element_content;
 }
 char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
-        char* output = (char*)malloc(10000);;
+        char* output = (char*)malloc(1000000);;
         int new_size = content_between_quotes(output, outer_ptr);
    printf("%s", outer_ptr);
     
