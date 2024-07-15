@@ -16,8 +16,8 @@ void create_pages() {
     while (token != NULL) {
         char* find_str = strdup(token);
         if (strstr(find_str, "=") != NULL) {
-            char* name = (char*)malloc(10000);
-            char* style = (char*)malloc(10000);
+            char* name = (char*)malloc(1000);
+            char* style = (char*)malloc(1000);
             char* content = (char*)malloc(1000000);
             name[0] = '\0';
             style[0] = '\0';

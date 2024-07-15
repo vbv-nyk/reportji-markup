@@ -85,31 +85,32 @@ page3 = page {
 ];
 }
 page4 = page {
-     heading: "PARSER OVERVIEW";
-     title: "Parser";
-     paragraphs: [
-          "The parser within our report generation tool is designed to process input data and convert it into structured reports efficiently. This chapter provides an in-depth exploration of the syntax and semantics employed by our parser.",
-];
-     title: "Syntax";
-     paragraphs: [
-          "The syntax of our parser defines the formal rules and structure that govern how input data is formatted and interpreted. It includes defining the grammar, symbols, and rules that dictate valid combinations and sequences of input elements. The syntax ensures consistency in data input and facilitates accurate parsing into meaningful report components. Key aspects of our parser's syntax include:",
-];
+     heading: "SYSTEM REQUIREMENT SPECIFICATION";
+     title: "SOFTWARE REQUIREMENTS";
      items: [
-          "Grammar Rules: Defining the language constructs and allowable sequences of tokens or symbols.",
-          "Data Types: Specifying the types of data that can be processed, such as text, numerical values, and structured data formats.",
-          "Syntax Validation: Verifying input conformity to predefined rules to prevent parsing errors and ensure data integrity.",
+          "Operating System: Cross-platform support",
+
+          "Programming Languages: JavaScript, Node.js",
+
+          "Frameworks and Libraries: React.js, Express.js",
+
+          "Database: Databases provided by AWS, Google Cloud Platform, Microsoft Azure, or any other reliable cloud service provider offering a comprehensive suite of cloud services.",
+
+          "Development Tools: Visual Studio Code, Git",
 ];
-     title: "Semantics";
-     paragraphs: [
-          "Beyond syntax, the semantics of our parser determine the meaning and interpretation of parsed input data. It involves understanding the relationships between parsed elements, applying contextual meaning, and executing actions based on parsed instructions. Key aspects of our parser's semantics include:",
-];
+     title: "HARDWARE REQUIREMENTS";
      items: [
-          "Contextual Interpretation: Assigning meaning to parsed data elements based on their context within the input data.",
-          "Execution of Actions: Processing parsed data to generate output reports, including formatting, aggregating information, and generating summaries.",
-          "Data Transformation: Converting raw input data into structured formats suitable for report generation, ensuring accuracy and relevance.",
-];
-     paragraphs: [
-          "Understanding the syntax and semantics of our parser is crucial for users to effectively utilize our report generation tool. It ensures that input data is processed correctly and that generated reports accurately reflect the intended information derived from the input. In the following sections, we will delve deeper into the implementation details and operational principles of our parser, highlighting its capabilities and optimizations that contribute to efficient and reliable report generation.",
+          "Processor: Intel Core i5",
+
+          "RAM: 8GB Minimum",
+
+          "Storage: 100GB Minimum",
+
+          "Graphics Card: Integrated Graphics",
+
+          "Network Connectivity: High-Speed Internet",
+
+          "Peripheral Devices: Standard Peripherals",
 ];
 }
 page5 = page {
@@ -141,18 +142,18 @@ page5 = page {
           "Document Repository: A centralized repository allows users to view and manage previously generated documents.",
 ];
      title: "Backend Infrastructure";
-     items: [
+     paragraphs: [
           "Backend Logic: Hosted on AWS EC2, manages report parsing, storage, and user interactions.",
           "GraphQL API: Implements a GraphQL layer for efficient data fetching and manipulation, enhancing application performance and flexibility.",
           "No-IP Integration: Manages the elastic IP address for consistent access to the EC2 instance hosting the application.",
 ];
      title: "Next.js And GraphQL Integration";
-     items: [
+     paragraphs: [
           "Next.js Framework: Enhances frontend performance with server-side rendering and optimized client-side navigation.",
           "GraphQL Integration: Facilitates efficient data querying and manipulation, improving application responsiveness and scalability.",
 ];
      title: "AWS Services Utilization";
-     items: [
+     paragraphs: [
           "AWS EC2: Hosts backend logic and interfaces with frontend for report generation and user management.",
           "AWS S3: Stores and retrieves generated reports securely, ensuring data durability and accessibility.",
           "No-IP Integration: Manages the elastic IP address for reliable access to the application hosted on EC2.",
@@ -189,35 +190,6 @@ page8 = page {
           "Lastly, we are committed to continuously evolving the parser in our application, adding more advanced features to enhance parsing accuracy and efficiency. Future updates will focus on refining parsing algorithms, supporting additional data formats, and improving error handling to further optimize the report generation process.",
 
           "These future implementations underscore our dedication to innovation and meeting the evolving needs of our users. By prioritizing these enhancements, we aim to solidify our position as a leading solution for efficient and reliable document creation in academic and professional settings.",
-];
-}
-page9 = page {
-     heading: "SYSTEM REQUIREMENT SPECIFICATION";
-     title: "SOFTWARE REQUIREMENTS";
-     items: [
-          "Operating System: Cross-platform support",
-
-          "Programming Languages: JavaScript, Node.js",
-
-          "Frameworks and Libraries: React.js, Express.js",
-
-          "Database: Databases provided by AWS, Google Cloud Platform, Microsoft Azure, or any other reliable cloud service provider offering a comprehensive suite of cloud services.",
-
-          "Development Tools: Visual Studio Code, Git",
-];
-     title: "HARDWARE REQUIREMENTS";
-     items: [
-          "Processor: Intel Core i5",
-
-          "RAM: 8GB Minimum",
-
-          "Storage: 100GB Minimum",
-
-          "Graphics Card: Integrated Graphics",
-
-          "Network Connectivity: High-Speed Internet",
-
-          "Peripheral Devices: Standard Peripherals",
 ];
 }
 }
