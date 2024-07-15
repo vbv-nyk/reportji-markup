@@ -14,7 +14,7 @@ char* parse_subtitle(ElementDefinition subtitle) {
 }
 char* parse_heading(ElementDefinition heading) {
    char* markup = (char*) malloc(1000);
-sprintf(markup, "\\chapter{\\hfill{\\centering %s}\\hfill}\n", heading.heading->text);
+   sprintf(markup, "\\chapter{%s}\n", heading.heading->text);
    return markup;
 }
 char* parse_author(ElementDefinition author) {
@@ -38,7 +38,7 @@ char* parse_paragraphs(ElementDefinition paragraphs) {
 }
 
 char* parse_items(ElementDefinition items) {
-   char* markup = (char*) malloc(1000000);
+   char* markup = (char*) malloc(100000);
    markup[0] = '\0';
    strcat(markup, "\\begin{itemize}\n");
    for(int i=0; i<items.items->count; i++)  {
@@ -59,7 +59,7 @@ char* parse_figures(ElementDefinition figures) {
 }
 
 char* parse_citations(ElementDefinition citations) {
-   char* markup = (char*) malloc(1000000);
+   char* markup = (char*) malloc(10000);
    markup[0] = '\0';
    strcat(markup, "\\begin{thebibliography}{100}\n");
 

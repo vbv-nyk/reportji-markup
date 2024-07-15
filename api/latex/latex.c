@@ -23,9 +23,9 @@ dprintf(fd, "\\usepackage{titlesec}\n");
 dprintf(fd, "\\titleformat{\\chapter}[display]\n");
 dprintf(fd, "{\\normalfont\\huge\\bfseries}\n");
 dprintf(fd, "{\\chaptername\\ \\thechapter}\n");
-dprintf(fd, "{20pt}\n");
+dprintf(fd, "{18pt}\n");
 dprintf(fd, "{\\Huge}\n");
-dprintf(fd, "\\titlespacing*{\\chapter}{0pt}{-20pt}{20pt}\n");
+dprintf(fd, "\\titlespacing*{\\chapter}{0pt}{-35pt}{10pt}\n");
 // Custom header and footer for VTU report
 dprintf(fd, "\\usepackage{fancyhdr}\n");
 dprintf(fd, "\\pagestyle{fancy}\n");
@@ -39,7 +39,7 @@ dprintf(fd, "\\newcommand{\\cround}{)}\n");
 dprintf(fd, "\\newcommand{\\ocurly}{\\text{\\{}}\n");
 dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
 dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
-dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{ReportJi}}\n");
+dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{}}\n");
 dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
 dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
 dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
@@ -50,7 +50,7 @@ dprintf(fd, "\\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n
 
 dprintf(fd, "\\fancypagestyle{plain}{\n");
 dprintf(fd, "  \\fancyhf{}\n");
-dprintf(fd, "  \\fancyhead[L]{\\color{black}\\textbf{ReportJi}}\n");
+dprintf(fd, "  \\fancyhead[L]{\\color{black}\\textbf{}}\n");
 dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
 dprintf(fd, "  \\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
 dprintf(fd, "  \\fancyfoot[C]{\\color{black}\\thepage}\n");
