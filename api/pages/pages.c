@@ -20,6 +20,7 @@ void create_pages() {
             char* style = (char*)malloc(1000);
             char* content = (char*)malloc(1000000);
             name[0] = '\0';
+            style[0] = '\0';
             content[0] = '\0';
 
             int name_size = extract_variable_name(name, find_str);
@@ -31,10 +32,12 @@ void create_pages() {
             outer_saveptr = content_between_braces(content, outer_saveptr, "{", "}");
             struct Page* page = (struct Page*)malloc(name_size + style_size + strlen(content));
 
-            page->name = name;
-            page->content = content;
+            page->name = strdup(name);
+            page->content = strdup(content);
             page->style = style_from_name(style);
             free(style);
+            free(name);
+            free(content);
 
             pages[page_count] = page;
             page_count++;
@@ -49,13 +52,13 @@ void create_pages() {
 }
 
 char* load_element_content(ElementType type, char* outer_ptr, int num_elements) {
-    char* element_content = (char*)malloc(10000);
+    char* element_content = (char*)malloc(100000);
     content_between_quotes(element_content, outer_ptr);
     return element_content;
 }
 char** inflate_element_arrays(char* outer_ptr, char** text, int* count) {
     while (*outer_ptr != ']') {
-        char* output = (char*)malloc(10000);
+        char* output = (char*)malloc(100000);
         content_between_quotes(output, outer_ptr);
     
         while(*outer_ptr != '\"' && *outer_ptr != ']') {
