@@ -7,8 +7,6 @@ page0 = page {
      paragraphs: [
           "The primary purpose of this project is to streamline the process of creating college reports for students. In academic environments, students are often required to produce numerous reports, which can be time-consuming and challenging, especially for those who may not have strong writing or formatting skills. Our report maker aims to alleviate these challenges by providing a user-friendly platform that automates the report creation process.",
           "Key objectives of the project include:",
-
-
 ];
      items: [
           "Efficiency: To significantly reduce the time and effort required for students to produce well-structured and formatted reports.",
@@ -16,12 +14,10 @@ page0 = page {
           "Consistency: To ensure that reports adhere to standardized formats and guidelines, thereby maintaining a high level of quality and uniformity.",
           "Customization: To offer customizable templates and features that cater to the diverse needs of students across various disciplines.",
           "Integration: To seamlessly integrate with AWS services, ensuring reliable performance, scalability, and security.",
-
 ];
      title: "Scope Of The Project";
      paragraphs: [
           "The scope of this project encompasses the design, development, deployment, and maintenance of a report maker application, hosted on AWS, that facilitates the creation of college reports for students. The following key features and functionalities are included within the scope of the project:",
-
 ];
      items: [
           "User Registration and Authentication: Secure user registration and login system, integrated with AWS Cognito for user authentication and management.",
@@ -39,9 +35,7 @@ page1 = page {
      title: "Research Articles In Simplified HTML: A Web-first Format For HTML-based Scholarly Articles";
      paragraphs: [
           "This paper introduces the Research Articles in Simplified HTML \oround or RASH\cround , which is a Web-first format for writing HTML-based scholarly papers; it is accompanied by the RASH Framework, a set of tools for interacting with RASH-based articles. The paper also presents an evaluation that involved authors and reviewers of RASH articles submitted to the SAVE-SD 2015 and SAVE-SD 2016 workshops. RASH has been developed aiming to: be easy to learn and use; share scholarly documents \oround and embedded semantic annotations\cround  through the Web; support its adoption within the existing publishing workflow. The evaluation study confirmed that RASH is ready to be adopted in workshops, conferences, and journals and can be quickly learnt by researchers who are familiar with HTML.",
-
           "RASH \oround and its Framework\cround  is another step towards enabling the definition of formal representations of the meaning of the content of an article, facilitating its automatic discovery, enabling its linking to semantically related articles, providing access to data within the article in actionable form, and allowing integration of data between papers.",
-
 ];
 }
 page2 = page {
@@ -49,21 +43,15 @@ page2 = page {
      title: "PROBLEM IDENTIFICATION";
      paragraphs: [
           "Identifying and addressing the challenges present in current tools for report generation underscores a critical need for innovation within the educational technology landscape. The prevailing methods of manual report creation often fall short of harnessing the full potential of automation and cloud computing to enhance efficiency and accuracy. Both students and professionals encounter significant obstacles when attempting to compile and format reports in a timely and error-free manner. The deficiency in streamlined and automated report generation processes contributes to inefficiencies and errors, leading to a notable gap between the time spent on manual report creation and more productive activities.",
-
           "One of the primary issues is the reliance on traditional methods of report generation that are prone to human error and time-consuming processes. Many individuals and organizations still use manual methods, such as word processors or spreadsheets, which require extensive manual input and formatting adjustments. As a consequence, users may experience delays in report completion and increased frustration due to repetitive tasks that could be automated.",
-
           "Furthermore, the underutilization of cloud computing capabilities within current report generation tools represents a missed opportunity for scalable and collaborative report creation. Cloud computing offers advantages such as real-time collaboration, version control, and access from anywhere, yet many report generation tools fail to fully leverage these capabilities. This underutilization restricts the ability of users to streamline workflows, collaborate effectively across teams, and ensure data security and accessibility.",
-
           "The current landscape of report generation tools lacks efficient automation and scalable cloud solutions, leading to inefficiencies, errors, and missed opportunities for collaborative and streamlined workflows. Addressing these challenges through innovative use of cloud computing and automation technologies is essential to enhancing productivity, accuracy, and user satisfaction in report generation tasks.",
 ];
      title: "PROBLEM STATEMENT";
      paragraphs: [
           "The identified challenges within traditional methods of report generation underscore a compelling need for transformative innovation in educational technology. The current landscape of manual report creation reveals significant shortcomings in leveraging automation and cloud computing to streamline and enhance efficiency in generating reports. Both students and professionals encounter substantial hurdles in compiling, formatting, and finalizing reports due to the reliance on outdated, error-prone methods.",
-
           "The discrepancy between manual report creation and automated solutions represents a critical gap that impedes users from achieving optimal efficiency and accuracy in report generation tasks. Many existing methods rely on word processors or spreadsheets, which require extensive manual input and formatting adjustments, leading to delays and potential errors in report completion. Consequently, individuals face challenges in meeting deadlines and allocating time to more strategic tasks that could benefit from automated report generation.",
-
           "Moreover, while cloud computing offers scalability, real-time collaboration, and enhanced data security, its integration within current report generation tools remains underutilized. Cloud-based solutions could optimize workflows, facilitate seamless collaboration across teams, and ensure accessibility from anywhere, yet many report generation tools lack robust integration with cloud computing services.",
-
           "In response to these pressing challenges, our project aims to pioneer a modern report generation tool that harnesses the full potential of automation and cloud computing. By integrating advanced technologies, our platform will offer users a seamless and efficient solution for creating, formatting, and collaborating on reports. Through targeted innovation and strategic implementation of automated tools, we seek to bridge the gap between manual report creation and scalable, cloud-based solutions, empowering users to enhance productivity, accuracy, and collaboration in report generation tasks.",
 ];
 }
@@ -85,32 +73,31 @@ page3 = page {
 ];
 }
 page4 = page {
-     heading: "SYSTEM REQUIREMENT SPECIFICATION";
-     title: "SOFTWARE REQUIREMENTS";
-     items: [
-          "Operating System: Cross-platform support",
-
-          "Programming Languages: JavaScript, Node.js",
-
-          "Frameworks and Libraries: React.js, Express.js",
-
-          "Database: Databases provided by AWS, Google Cloud Platform, Microsoft Azure, or any other reliable cloud service provider offering a comprehensive suite of cloud services.",
-
-          "Development Tools: Visual Studio Code, Git",
+     heading: "PARSER OVERVIEW";
+     title: "Parser";
+     paragraphs: [
+          "The parser within our report generation tool is designed to process input data and convert it into structured reports efficiently. This chapter provides an in-depth exploration of the syntax and semantics employed by our parser.",
 ];
-     title: "HARDWARE REQUIREMENTS";
+     title: "Syntax";
+     paragraphs: [
+          "The syntax of our parser defines the formal rules and structure that govern how input data is formatted and interpreted. It includes defining the grammar, symbols, and rules that dictate valid combinations and sequences of input elements. The syntax ensures consistency in data input and facilitates accurate parsing into meaningful report components. Key aspects of our parser's syntax include:",
+];
      items: [
-          "Processor: Intel Core i5",
-
-          "RAM: 8GB Minimum",
-
-          "Storage: 100GB Minimum",
-
-          "Graphics Card: Integrated Graphics",
-
-          "Network Connectivity: High-Speed Internet",
-
-          "Peripheral Devices: Standard Peripherals",
+          "Grammar Rules: Defining the language constructs and allowable sequences of tokens or symbols.",
+          "Data Types: Specifying the types of data that can be processed, such as text, numerical values, and structured data formats.",
+          "Syntax Validation: Verifying input conformity to predefined rules to prevent parsing errors and ensure data integrity.",
+];
+     title: "Semantics";
+     paragraphs: [
+          "Beyond syntax, the semantics of our parser determine the meaning and interpretation of parsed input data. It involves understanding the relationships between parsed elements, applying contextual meaning, and executing actions based on parsed instructions. Key aspects of our parser's semantics include:",
+];
+     items: [
+          "Contextual Interpretation: Assigning meaning to parsed data elements based on their context within the input data.",
+          "Execution of Actions: Processing parsed data to generate output reports, including formatting, aggregating information, and generating summaries.",
+          "Data Transformation: Converting raw input data into structured formats suitable for report generation, ensuring accuracy and relevance.",
+];
+     paragraphs: [
+          "Understanding the syntax and semantics of our parser is crucial for users to effectively utilize our report generation tool. It ensures that input data is processed correctly and that generated reports accurately reflect the intended information derived from the input. In the following sections, we will delve deeper into the implementation details and operational principles of our parser, highlighting its capabilities and optimizations that contribute to efficient and reliable report generation.",
 ];
 }
 page5 = page {
@@ -118,21 +105,15 @@ page5 = page {
      title: "Tech Stack";
      paragraphs: [
           "Frontend:The frontend of our application is developed using JavaScript and utilizes React.js as the primary framework. React.js allows for efficient and dynamic user interfaces, enhancing the user experience with its component-based architecture and virtual DOM rendering.",
-
           "Backend:Our backend infrastructure is built on Node.js, leveraging its asynchronous and event-driven architecture to handle concurrent requests efficiently. Express.js is used as the web application framework, providing robust routing and middleware capabilities to streamline API development and server-side logic.",
-
           "Authentication:For authentication purposes, we have implemented OAuth for secure, delegated access to user resources without exposing credentials. Additionally, Passport.js is employed for authentication strategies, simplifying the integration of various authentication providers and ensuring seamless user authentication and authorization flows.",
-
           "Caching and Performance:To optimize performance and enhance scalability, our application utilizes caching mechanisms. We leverage caching strategies to store frequently accessed data in-memory or through reliable cloud-based caching services. This approach minimizes database load and reduces latency, thereby improving overall application responsiveness and user experience.",
 ];
      title: "User Authentication";
      paragraphs: [
           "Our application employs robust authentication mechanisms to ensure secure access for users. We offer two primary methods for authentication: OAuth and Passport.js.",
-
           "OAuth enables seamless and secure authentication through Google Sign-In, allowing users to authenticate using their Google accounts. This approach enhances user convenience by eliminating the need for separate account credentials while maintaining stringent security standards.",
-
           "In addition to OAuth, we utilize Passport.js to manage authentication strategies within our application. Passport.js streamlines the integration of authentication providers, offering flexibility and reliability in handling user login sessions. This framework supports various authentication mechanisms, ensuring a seamless and consistent authentication experience across different platforms and devices.",
-
           "Together, OAuth and Passport.js empower our application with secure, efficient, and user-friendly authentication solutions, ensuring that user data remains protected while enhancing usability and accessibility.",
 ];
      title: "Report Generation";
@@ -142,18 +123,18 @@ page5 = page {
           "Document Repository: A centralized repository allows users to view and manage previously generated documents.",
 ];
      title: "Backend Infrastructure";
-     paragraphs: [
+     items: [
           "Backend Logic: Hosted on AWS EC2, manages report parsing, storage, and user interactions.",
           "GraphQL API: Implements a GraphQL layer for efficient data fetching and manipulation, enhancing application performance and flexibility.",
           "No-IP Integration: Manages the elastic IP address for consistent access to the EC2 instance hosting the application.",
 ];
      title: "Next.js And GraphQL Integration";
-     paragraphs: [
+     items: [
           "Next.js Framework: Enhances frontend performance with server-side rendering and optimized client-side navigation.",
           "GraphQL Integration: Facilitates efficient data querying and manipulation, improving application responsiveness and scalability.",
 ];
      title: "AWS Services Utilization";
-     paragraphs: [
+     items: [
           "AWS EC2: Hosts backend logic and interfaces with frontend for report generation and user management.",
           "AWS S3: Stores and retrieves generated reports securely, ensuring data durability and accessibility.",
           "No-IP Integration: Manages the elastic IP address for reliable access to the application hosted on EC2.",
@@ -161,36 +142,66 @@ page5 = page {
 }
 page6 = page {
      heading: "TESTING AND RESULTS";
+     figures: [
+          { src: "input_file.png", caption: "Figure 1: Running The Parser" },
+          { src: "input_file.png", caption: "Figure 2: Running The Parser" }
+     ];
 }
 page7 = page {
-     heading: "CONCLUSION";
-     paragraphs: [
-          "the development of our report generation tool represents a significant advancement in leveraging modern technologies to enhance productivity and user experience in document creation. By integrating C programming with AWS services such as EC2 and S3, we have created a robust backend infrastructure capable of efficiently parsing inputs and generating reports. This infrastructure is complemented by a responsive frontend interface built on Next.js, providing users with intuitive controls for inputting content and initiating report generation seamlessly.",
-
-          "The adoption of GraphQL has further optimized data fetching and manipulation, enabling faster response times and scalable data handling capabilities. OAuth authentication, coupled with Google Sign-In, ensures secure access for users while simplifying the login process. Additionally, the integration of No-IP for managing elastic IP addresses has provided reliable and consistent access to our application hosted on AWS EC2.",
-
-          "Our project not only addresses the practical challenges of report generation but also emphasizes usability and scalability. The centralized document repository in AWS S3 ensures secure storage and easy retrieval of generated reports, enhancing workflow efficiency. Moreover, the inclusion of features like user dashboards for managing documents and tracking report history enhances user convenience and productivity.",
-
-          "Looking forward, our commitment to continuous improvement and adaptation to emerging technologies will drive further enhancements in functionality and user engagement. By staying at the forefront of technological innovation, we aim to redefine document creation processes, empowering users with tools that streamline tasks and elevate their overall experience.",
-
-          "In summary, our report generation tool stands as a testament to effective integration of backend technologies, frontend usability, and cloud infrastructure, setting a benchmark for efficiency and reliability in document management and creation.",
+     heading: "SYSTEM REQUIREMENT SPECIFICATION";
+     title: "SOFTWARE REQUIREMENTS";
+     items: [
+          "Operating System: Cross-platform support",
+          "Programming Languages: JavaScript, Node.js",
+          "Frameworks and Libraries: React.js, Express.js",
+          "Database: Databases provided by AWS, Google Cloud Platform, Microsoft Azure, or any other reliable cloud service provider offering a comprehensive suite of cloud services.",
+          "Development Tools: Visual Studio Code, Git",
+];
+     title: "HARDWARE REQUIREMENTS";
+     items: [
+          "Processor: Intel Core i5",
+          "RAM: 8GB Minimum",
+          "Storage: 100GB Minimum",
+          "Graphics Card: Integrated Graphics",
+          "Network Connectivity: High-Speed Internet",
+          "Peripheral Devices: Standard Peripherals",
 ];
 }
 page8 = page {
      heading: "FUTURE ENHANCEMENTS";
      paragraphs: [
           "Moving forward, our focus will be on enhancing the functionality and usability of our report generation tool. One key area of development will be implementing mechanisms to avoid duplicates of the same file during updates. This enhancement will streamline document management by automatically identifying and managing duplicate reports, ensuring data integrity and reducing redundancy in storage.",
-
           "Additionally, we plan to introduce support for different template formats in our report generator. This expansion will cater to diverse user preferences and document requirements, providing flexibility in document styling and layout. Users will have the option to choose from a variety of templates, optimizing the presentation of their reports according to specific needs and industry standards.",
-
           "Furthermore, the integration of spell check functionality is on our roadmap. This feature will enhance the quality and professionalism of generated reports by automatically identifying and correcting spelling errors. By implementing robust spell check capabilities, we aim to improve document accuracy and readability, meeting high standards of professional communication.",
-
           "Another significant future enhancement includes integrating plagiarism check capabilities into our report generation tool. This feature will empower users to ensure the originality and integrity of their content by detecting and highlighting potential instances of plagiarism. By incorporating plagiarism check tools, we uphold academic and professional integrity standards, providing users with confidence in the authenticity of their reports.",
-
           "Lastly, we are committed to continuously evolving the parser in our application, adding more advanced features to enhance parsing accuracy and efficiency. Future updates will focus on refining parsing algorithms, supporting additional data formats, and improving error handling to further optimize the report generation process.",
-
           "These future implementations underscore our dedication to innovation and meeting the evolving needs of our users. By prioritizing these enhancements, we aim to solidify our position as a leading solution for efficient and reliable document creation in academic and professional settings.",
 ];
+}
+page9 = page {
+     heading: "CONCLUSION";
+     paragraphs: [
+          "the development of our report generation tool represents a significant advancement in leveraging modern technologies to enhance productivity and user experience in document creation. By integrating C programming with AWS services such as EC2 and S3, we have created a robust backend infrastructure capable of efficiently parsing inputs and generating reports. This infrastructure is complemented by a responsive frontend interface built on Next.js, providing users with intuitive controls for inputting content and initiating report generation seamlessly.",
+          "The adoption of GraphQL has further optimized data fetching and manipulation, enabling faster response times and scalable data handling capabilities. OAuth authentication, coupled with Google Sign-In, ensures secure access for users while simplifying the login process. Additionally, the integration of No-IP for managing elastic IP addresses has provided reliable and consistent access to our application hosted on AWS EC2.",
+          "Our project not only addresses the practical challenges of report generation but also emphasizes usability and scalability. The centralized document repository in AWS S3 ensures secure storage and easy retrieval of generated reports, enhancing workflow efficiency. Moreover, the inclusion of features like user dashboards for managing documents and tracking report history enhances user convenience and productivity.",
+          "Looking forward, our commitment to continuous improvement and adaptation to emerging technologies will drive further enhancements in functionality and user engagement. By staying at the forefront of technological innovation, we aim to redefine document creation processes, empowering users with tools that streamline tasks and elevate their overall experience.",
+          "Our report generation tool stands as a testament to effective integration of backend technologies, frontend usability, and cloud infrastructure, setting a benchmark for efficiency and reliability in document management and creation.",
+];
+}
+page10 = page {
+     heading: "CODE IMPLEMENTATION";
+     title: "PARSER CODE";
+     paragraphs: [
+          "\begin{lstlisting}
+|\#include \quotes api/libs.h\quotes \newline \newline int main\oround int argc, char* argv\osquare \csquare \cround  \ocurly \newline     if\oround argc < 2\cround  \ocurly \newline         usage\_error\oround \quotes Please provide the filename\quotes \cround ;\newline     \ccurly \newline     \newline     load\_sections\oround argv\osquare 1\csquare \cround ;\newline \newline     time\_t ts\_epoch;\newline     //printf\oround \quotes \%ld\quotes , \oround long\cround ts\_epoch\cround ;\newline     struct tm *broken\_time = \oround struct tm*\cround malloc\oround sizeof\oround struct tm\cround \cround ; \newline     broken\_time = localtime\oround \&ts\_epoch\cround ;\newline \newline     create\_pages\oround \cround ;\newline     get\_elements\oround \cround ;\newline     // init\_output\oround \cround ;\newline     // write\_markup\_to\_file\oround broken\_time\cround ;\newline \newline     return EXIT\_SUCCESS;\newline \ccurly |
+          \end{lstlisting}"
+];
+     paragraphs: [
+          "The provided code is a C program that processes an input file and performs various operations such as loading sections, creating pages, and extracting elements. The program begins by including the necessary header file \quotes api/libs.h\quotes , which likely contains declarations for functions and definitions required for the operations in the program. In the main function, the program first checks if the user has provided the required command-line argument \oround the filename\cround . If the argument is missing, it calls the usage\_error function to display an error message, prompting the user to provide the filename.",
+          "Once the filename is provided, the program calls the load\_sections function, passing the filename as an argument. This function likely reads the file and loads its contents into appropriate sections for further processing. The program then prepares to work with timestamps by declaring a time\_t variable named ts\_epoch, which is intended to store an epoch timestamp. The localtime function is used to convert the epoch timestamp into a struct tm structure, which holds broken-down time values such as year, month, day, hour, minute, and second. Memory is allocated for this structure using malloc.",
+          "Following the time handling setup, the program proceeds to call several functions that carry out the main tasks. The create\_pages function is likely responsible for creating or setting up pages based on the loaded sections. The get\_elements function extracts specific elements from the loaded sections for further processing or manipulation. The commented-out lines suggest that there are additional functions, init\_output and write\_markup\_to\_file, which are intended to initialize the output and write the processed data, possibly along with the broken-down time information, to a file. Finally, the program returns EXIT\_SUCCESS, indicating successful execution.",
+];
+     title: "The Input File";
 }
 }
 output = {
