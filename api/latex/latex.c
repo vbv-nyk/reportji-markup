@@ -17,7 +17,7 @@ dprintf(fd, "\\usepackage{xcolor}\n");
 dprintf(fd, "\\usepackage{color}\n");
 dprintf(fd, "\\usepackage{tabularx}\n");
 dprintf(fd, "\\usepackage{listings}\n");
-dprintf(fd, "\\definecolor{myorange}{RGB}{255, 165, 0}\n");
+dprintf(fd, "\\definecolor{myorange}{RGB}{131,59, 12}\n");
 // Add the titlesec package and chapter spacing configuration
 dprintf(fd, "\\usepackage{titlesec}\n");
 dprintf(fd, "\\titleformat{\\chapter}[display]\n");
@@ -41,9 +41,9 @@ dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
 dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
 dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{VTU College Report}}\n");
 dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
-dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of XYZ}}\n");
+dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
 dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
-dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{%d %d %d %d %d}}\n", broken_time->tm_mon, broken_time->tm_hour, broken_time->tm_hour);
+dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{July 15th 2024}}\n");
 
 dprintf(fd, "\\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");
 dprintf(fd, "\\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n");
