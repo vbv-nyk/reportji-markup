@@ -2,27 +2,38 @@ stlyes = {
 }
 pages = {
 page0 = page {
-     heading: "Hello World";
-     title: "Something";
-     figures: [
-          { src: "input_file.png", caption: "Test" }
+     heading: "Introduction";
+     title: "Problem Statement";
+     paragraphs: [
+          "The primary purpose of this project is to streamline the process of creating college reports for students. In academic environments, students are often required to produce numerous reports, which can be time-consuming and challenging, especially for those who may not have strong writing or formatting skills. Our report maker aims to alleviate these challenges by providing a user-friendly platform that automates the report creation process.",
+          "Key objectives of the project include:",
+
+
+     ];
+     items: [
+          "Efficiency: To significantly reduce the time and effort required for students to produce well-structured and formatted reports.",
+          "Accessibility: To provide an easy-to-use interface that is accessible to all students, regardless of their technical proficiency.",
+          "Consistency: To ensure that reports adhere to standardized formats and guidelines, thereby maintaining a high level of quality and uniformity.",
+          "Customization: To offer customizable templates and features that cater to the diverse needs of students across various disciplines.",
+          "Integration: To seamlessly integrate with AWS services, ensuring reliable performance, scalability, and security.",
+     ];
+     title: "Scope of the Project";
+     paragraphs: [
+          "The scope of this project encompasses the design, development, deployment, and maintenance of a report maker application, hosted on AWS, that facilitates the creation of college reports for students. The following key features and functionalities are included within the scope of the project:",
+     ];
+     items: [
+          "User Registration and Authentication: Secure user registration and login system, integrated with AWS Cognito for user authentication and management.",
+          "Template Library: A diverse collection of customizable report templates designed to meet various academic requirements and formatting standards.",
+          "Report Creation and Editing: Intuitive user interface for creating and editing reports, with rich text editing capabilities including formatting, inserting images, tables, and citations. Auto-save and version control features to prevent data loss.",
+          "Content Management: Easy import and export of content from various sources, such as text files and PDFs. Tools for organizing and managing multiple reports and sections.",
+          "Collaboration Tools: Real-time collaboration features allowing multiple users to work on a report simultaneously. Commenting and feedback system to facilitate peer review and instructor feedback.",
+          "Integration with AWS Services: Utilization of AWS S3 for secure storage of user data and reports. Deployment using AWS EC2 instances for scalable and reliable performance. Implementation of AWS Lambda functions for serverless computing tasks.",
+          "User Support and Documentation: Comprehensive user guide and tutorials to help students navigate the application. In-app support and FAQ section for troubleshooting common issues.",
+          "Security and Compliance: Data encryption at rest and in transit to ensure the privacy and security of user information. Compliance with relevant data protection regulations, such as GDPR.",
      ];
      paragraphs: [
-          "\osquare{}\osquare{}\osquare{}\osquare{}\osquare{}",
-];
-     paragraphs: [
-          "Hello Worldd",
-];
-     title: "Introduction";
-     paragraphs: [
-          "TaskMaster is a productivity application designed to streamline task management for individuals and teams. By providing an intuitive interface and powerful organizational tools, TaskMaster aims to enhance efficiency and help users stay on top of their responsibilities.",
-];
-     title: "Features";
-     items: [
-          "Task Creation and Categorization: Users can easily create tasks, assign deadlines, and categorize them by project or priority.",
-          "Collaboration Tools: The software enables users to share tasks with team members, set permissions, and leave comments, fostering effective communication.",
-          "Analytics Dashboard: An integrated dashboard provides insights into task completion rates and productivity trends, helping users identify areas for improvement.",
-];
+          "The project also includes ongoing maintenance and updates to ensure the application remains functional, secure, and up-to-date with the latest technological advancements. Additionally, the scope may extend to future enhancements and new features based on user feedback and evolving academic needs.",
+     ];
 }
 }
 output = {
