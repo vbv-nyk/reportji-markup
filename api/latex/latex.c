@@ -39,20 +39,20 @@ dprintf(fd, "\\newcommand{\\cround}{)}\n");
 dprintf(fd, "\\newcommand{\\ocurly}{\\text{\\{}}\n");
 dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
 dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
-dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{VTU College Report}}\n");
+dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{ReportJi}}\n");
 dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
 dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
 dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
-dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{July 15th 2024}}\n");
+dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{15th June 2024}}\n");
 
 dprintf(fd, "\\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");
 dprintf(fd, "\\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n");
 
 dprintf(fd, "\\fancypagestyle{plain}{\n");
 dprintf(fd, "  \\fancyhf{}\n");
-dprintf(fd, "  \\fancyhead[L]{\\color{black}\\textbf{VTU College Report}}\n");
+dprintf(fd, "  \\fancyhead[L]{\\color{black}\\textbf{ReportJi}}\n");
 dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
-dprintf(fd, "  \\fancyfoot[L]{\\color{black}\\textbf{Department of XYZ}}\n");
+dprintf(fd, "  \\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
 dprintf(fd, "  \\fancyfoot[C]{\\color{black}\\thepage}\n");
 dprintf(fd, "  \\fancyfoot[R]{\\color{black}\\textbf{15 June 2024}}\n");
 dprintf(fd, "  \\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");

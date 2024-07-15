@@ -14,7 +14,7 @@ char* parse_subtitle(ElementDefinition subtitle) {
 }
 char* parse_heading(ElementDefinition heading) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\chapter{%s}\n", heading.heading->text);
+sprintf(markup, "\\chapter{\\hfill{\\centering %s}\\hfill}\n", heading.heading->text);
    return markup;
 }
 char* parse_author(ElementDefinition author) {
