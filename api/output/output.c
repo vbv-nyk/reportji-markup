@@ -32,7 +32,7 @@ char* parse_paragraphs(ElementDefinition paragraphs) {
    sprintf(markup, "%s\n", paragraphs.paragraphs->text[0]);
 
    for(int i=1; i<paragraphs.paragraphs->count; i++)  {
-       sprintf(markup + strlen(markup), "%s\\par\n",paragraphs.paragraphs->text[i]);
+       sprintf(markup + strlen(markup), "%s\n",paragraphs.paragraphs->text[i]);
    }
    return markup;
 }
