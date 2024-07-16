@@ -66,6 +66,7 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "  backgroundcolor=\\color{white},\n");
     dprintf(fd, "  basicstyle=\\ttfamily\\color{black},\n");
     dprintf(fd, "  escapeinside={||},\n");
+    dprintf(fd, "  breaklines=true,\n");
     dprintf(fd, "  lineskip=2pt,\n");  // Adjust the value as needed
     dprintf(fd, "}\n");
     dprintf(fd, "\\begin{document}\n");
