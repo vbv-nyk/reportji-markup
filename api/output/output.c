@@ -4,7 +4,7 @@ Output* output;
 
 char* parse_title(ElementDefinition title) {
    char* markup = (char*) malloc(1000);
-   sprintf(markup, "\\section{%s}\n", title.title->text);
+   sprintf(markup, "\\uppercase{\\section{%s}}\n", title.title->text);
    return markup;
 }
 char* parse_subtitle(ElementDefinition subtitle) {
