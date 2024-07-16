@@ -19,15 +19,16 @@ void write_markup_to_file(struct tm *broken_time) {
     // Add the titlesec package and chapter spacing configuration
     dprintf(fd, "\\usepackage{titlesec}\n");
     dprintf(fd, "\\titleformat{\\chapter}[display]\n");
-    dprintf(fd, "{\\normalfont\\huge\\bfseries}\n");
+    dprintf(fd, "{\\normalfont\\fontsize{16}{22}\\selectfont\\bfseries}\n");
     dprintf(fd, "{\\chaptername\\ \\thechapter}\n");
-    dprintf(fd, "{20pt}\n");
-    dprintf(fd, "{\\Huge}\n");
+    dprintf(fd, "{10pt}\n");
+    dprintf(fd, "{\\fontsize{18}{22}\\selectfont}\n");
     dprintf(fd, "\\titlespacing*{\\chapter}{0pt}{-20pt}{20pt}\n");
     // Custom header and footer for VTU report
     dprintf(fd, "\\usepackage{fancyhdr}\n");
     dprintf(fd, "\\pagestyle{fancy}\n");
     dprintf(fd, "\\fancyhf{}\n");
+    dprintf(fd, "\\renewcommand{\\normalsize}{\\fontsize{12}{14}\\selectfont}\n");
 
     dprintf(fd, "\\DeclareUnicodeCharacter{2212}{\\ensuremath{-}}");
     dprintf(fd, "\\newcommand{\\osquare}{[}\n");
