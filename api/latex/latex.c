@@ -22,7 +22,7 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "{\\normalfont\\fontsize{16}{22}\\selectfont\\bfseries}\n");
     dprintf(fd, "{\\chaptername\\ \\thechapter}\n");
     dprintf(fd, "{10pt}\n");
-    dprintf(fd, "{\\fontsize{18}{22}\\selectfont}\n");
+    dprintf(fd, "{\\centering\\fontsize{18}{22}\\selectfont}\n");
     dprintf(fd, "\\titlespacing*{\\chapter}{0pt}{-20pt}{20pt}\n");
     // Custom header and footer for VTU report
     dprintf(fd, "\\usepackage{fancyhdr}\n");
@@ -38,8 +38,8 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\newcommand{\\ocurly}{\\text{\\{}}\n");
     dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
     dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
-    dprintf(fd, "\\fancyhead[L]{\\color{black}\\textbf{}}\n");
-    dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
+    dprintf(fd, "  \\fancyhead[L]{\\color{black}\\fontsize{12}{20}\\selectfont\\bfseries\\textbf{ReportJi}}\n");
+    // dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
     dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
     dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
     dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{15th June 2024}}\n");
@@ -49,8 +49,8 @@ void write_markup_to_file(struct tm *broken_time) {
 
     dprintf(fd, "\\fancypagestyle{plain}{\n");
     dprintf(fd, "  \\fancyhf{}\n");
-    dprintf(fd, "  \\fancyhead[L]{\\color{black}\\textbf{}}\n");
-    dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
+    dprintf(fd, "  \\fancyhead[L]{\\color{black}\\fontsize{12}{20}\\selectfont\\bfseries\\textbf{ReportJi}}\n");
+    // dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
     dprintf(fd, "  \\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
     dprintf(fd, "  \\fancyfoot[C]{\\color{black}\\thepage}\n");
     dprintf(fd, "  \\fancyfoot[R]{\\color{black}\\textbf{15 June 2024}}\n");
