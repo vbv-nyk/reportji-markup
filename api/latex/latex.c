@@ -38,6 +38,7 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\newcommand{\\ocurly}{\\text{\\{}}\n");
     dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
     dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
+    dprintf(fd, "\\newcommand{\\codelst}[1]{\\lstinline{#1}}\n");
     dprintf(fd, "  \\fancyhead[L]{\\color{black}\\fontsize{12}{20}\\selectfont\\bfseries\\textbf{ReportJi}}\n");
     dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
     dprintf(fd, "\\fancyfoot[L]{\\color{black} \\fontsize{12}{20}\\selectfont\\textbf{Department of Computer Science}}\n");
