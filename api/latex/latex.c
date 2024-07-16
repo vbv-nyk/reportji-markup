@@ -39,10 +39,11 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\newcommand{\\ccurly}{\\text{\\}}}\n");
     dprintf(fd, "\\newcommand{\\quotes}{\"}\n");
     dprintf(fd, "  \\fancyhead[L]{\\color{black}\\fontsize{12}{20}\\selectfont\\bfseries\\textbf{ReportJi}}\n");
-    // dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
-    dprintf(fd, "\\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
-    dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
-    dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{15th June 2024}}\n");
+    dprintf(fd, "\\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
+    dprintf(fd, "\\fancyfoot[L]{\\color{black} \\fontsize{12}{20}\\selectfont\\textbf{Department of Computer Science}}\n");
+    // dprintf(fd, "\\fancyfoot[C]{\\color{black}\\thepage}\n");
+    dprintf(fd, "  \\fancyfoot[R]{\\color{black}\\fontsize{12}{20}\\selectfont Page \\thepage}\n");
+    // dprintf(fd, "\\fancyfoot[R]{\\color{black}\\textbf{15th June 2024}}\n");
 
     dprintf(fd, "\\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");
     dprintf(fd, "\\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n");
@@ -50,10 +51,10 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\fancypagestyle{plain}{\n");
     dprintf(fd, "  \\fancyhf{}\n");
     dprintf(fd, "  \\fancyhead[L]{\\color{black}\\fontsize{12}{20}\\selectfont\\bfseries\\textbf{ReportJi}}\n");
-    // dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
-    dprintf(fd, "  \\fancyfoot[L]{\\color{black}\\textbf{Department of Computer Science}}\n");
-    dprintf(fd, "  \\fancyfoot[C]{\\color{black}\\thepage}\n");
-    dprintf(fd, "  \\fancyfoot[R]{\\color{black}\\textbf{15 June 2024}}\n");
+    dprintf(fd, "  \\fancyhead[R]{\\color{black}\\textbf{\\leftmark}}\n");
+    dprintf(fd, "  \\fancyfoot[L]{\\color{black} \\fontsize{12}{20}\\selectfont\\textbf{Department of Computer Science}}\n");
+    // dprintf(fd, "  \\fancyfoot[R]{\\color{black}\\textbf{15 June 2024}}\n");
+    dprintf(fd, "  \\fancyfoot[R]{\\fontsize{12}{20}\\selectfont \\color{black}Page \\thepage}\n");
     dprintf(fd, "  \\renewcommand{\\headrule}{\\color{myorange}\\hrule height 0.4pt}\n");
     dprintf(fd, "  \\renewcommand{\\footrule}{\\color{myorange}\\hrule height 0.4pt}\n");
     dprintf(fd, "}\n");
