@@ -15,6 +15,7 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\usepackage{color}\n");
     dprintf(fd, "\\usepackage{tabularx}\n");
     dprintf(fd, "\\usepackage{listings}\n");
+    dprintf(fd, "\\usepackage{subcaption}\n");
     dprintf(fd, "\\definecolor{myorange}{RGB}{131,59, 12}\n");
     // Add the titlesec package and chapter spacing configuration
     dprintf(fd, "\\usepackage{titlesec}\n");
