@@ -50,12 +50,18 @@ char* parse_items(ElementDefinition items) {
 char* parse_figures(ElementDefinition figures) {
    char* markup = (char*) malloc(1000);
    markup[0] = '\0';
-   strcat(markup, "\\begin{figure}[h]\n\\centering\n");
-   for(int i=1; i<figures.figures->count; i++) {
-       sprintf(markup + strlen(markup), "\\begin{subfigure}[b]{0.45\\textwidth}\n\\centering\n\\includegraphics{sample.png}\n\\caption{%s}\n\\end{subfigure}\n", figures.figures->figureContent[i]->caption);
+   if(figures.figures->count > 1) {
+	   strcat(markup, "\\begin{figure}[h]\n\\centering\n");
+	   for(int i=1; i<figures.figures->count; i++) {
+	       sprintf(markup + strlen(markup), "\\begin{subfigure}[b]{0.45\\textwidth}\n\\centering\n\\includegraphics{sample.png}\n\\caption{%s}\n\\end{subfigure}\n", figures.figures->figureContent[i]->caption);
+	   }
+		sprintf(markup + strlen(markup), "\\caption{%s}\n", figures.figures->figureContent[0]->caption);
+	   strcat(markup, "\\end{figure}\n");
+   } else {
+	   strcat(markup, "\\begin{figure}[h]\n\\centering\n");
+	       sprintf(markup + strlen(markup), "\\centering\n\\includegraphics{sample.png}\n\\caption{%s}\n", figures.figures->figureContent[0]->caption);
+	   strcat(markup, "\\end{figure}\n");
    }
-	sprintf(markup + strlen(markup), "\\caption{%s}\n", figures.figures->figureContent[0]->caption);
-   strcat(markup, "\\end{figure}\n");
    return markup;
 }
 

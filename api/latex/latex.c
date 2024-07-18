@@ -16,12 +16,13 @@ void write_markup_to_file(struct tm *broken_time) {
     dprintf(fd, "\\usepackage{tabularx}\n");
     dprintf(fd, "\\usepackage{listings}\n");
     dprintf(fd, "\\usepackage{subcaption}\n");
+    dprintf(fd, "\\usepackage{titlesec}\n");
     dprintf(fd, "\\definecolor{myorange}{RGB}{131,59, 12}\n");
     // Add the titlesec package and chapter spacing configuration
     dprintf(fd, "\\usepackage{titlesec}\n");
     dprintf(fd, "\\titleformat{\\chapter}[display]\n");
     dprintf(fd, "{\\normalfont\\fontsize{16}{22}\\selectfont\\bfseries}\n");
-    dprintf(fd, "{\\chaptername\\ \\thechapter}\n");
+    dprintf(fd, "{\\MakeUppercase{\\chaptertitlename} \\thechapter}\n");
     dprintf(fd, "{10pt}\n");
     dprintf(fd, "{\\centering\\fontsize{18}{22}\\selectfont}\n");
     dprintf(fd, "\\titlespacing*{\\chapter}{0pt}{-20pt}{20pt}\n");
