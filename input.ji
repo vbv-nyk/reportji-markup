@@ -71,6 +71,11 @@ page3 = page {
           "Enhance user experience with intuitive interfaces for efficient report generation and collaboration.",
           "Optimize productivity by minimizing manual tasks and maximizing automation capabilities in report generation workflows.",
 ];
+     differences: [
+       ["Characteristic", "Size", "Color", "Taste"],
+       ["Apple", "Small", "Red", "It's about how you eat it"],
+       ["Banana", "Big", "Depends", "Satisfactory"]
+    ];
 }
 page4 = page {
      heading: "SYSTEM REQUIREMENT SPECIFICATION";

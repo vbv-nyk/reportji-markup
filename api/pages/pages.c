@@ -113,7 +113,7 @@ FigureContent** inflate_figure_arrays(char* outer_ptr, FigureContent** figureCon
 
 DifferenceColumns** inflate_tables_data(char* outer_ptr, DifferenceColumns** differenceColumns, int *count) {
     while(*outer_ptr != ';') {
-        while(*outer_ptr != '[' && *outer_ptr != '\0') {
+        while(*outer_ptr != ';' && *outer_ptr != '[' && *outer_ptr != '\0') {
             outer_ptr++;
         }
         if(*outer_ptr == ';') {
@@ -123,8 +123,11 @@ DifferenceColumns** inflate_tables_data(char* outer_ptr, DifferenceColumns** dif
         int rows_count = 0;
         char** text = (char**)malloc(sizeof(char*) * 1);
         text = inflate_element_arrays(outer_ptr, text, &rows_count);
-        while(*outer_ptr != ']' && *(outer_ptr + 1) != '\0') {
+        while(*outer_ptr != ';' && *outer_ptr != ']' && *(outer_ptr + 1) != '\0') {
             outer_ptr++;
+        }
+        if(*outer_ptr == ';') {
+            return differenceColumns;
         }
         DifferenceColumns* differenceColumn = (DifferenceColumns*)malloc(sizeof(DifferenceColumns));
         differenceColumn->content = text;
